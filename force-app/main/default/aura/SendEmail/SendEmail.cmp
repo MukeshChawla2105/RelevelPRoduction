@@ -1,0 +1,45 @@
+<aura:component controller="SendEmailHandler" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="subject" type="String" default=''/> 
+    <aura:attribute name="myMessage" type="String" default=''/>    
+    <aura:attribute name="recordId" type="String" default=''/> 
+    <aura:attribute name="emailId" type="String" default=''/> 
+    <aura:attribute name="TemplateName" type="List" default=''/> 
+    <aura:attribute name="emailTemps" type="EmailTemplate" default=''/> 
+    <aura:attribute name="emailBody" type="boolean" default="true"/>
+    <aura:attribute name="selectedValue" type="String" default="Business Development program" />
+    
+    <lightning:card>
+    <div class="slds-form-element" style="margin:2%">        
+                    <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+
+            <b>Email Converstion</b>
+        </div>       
+        <label class="slds-form-element__label" for="form-element-01">Email</label>
+        <div class="slds-form-element__control">
+            <input type="text" id="txtEmail" class="slds-input" value="{!v.emailId}" disabled="true"/>
+        </div>
+        
+        <lightning:select name="select" label="Select a Email Template:" aura:id="select" value="{!v.selectedValue}" onchange="{! c.onChange }">
+            <aura:iteration items="{!v.TemplateName}" var="option">
+                <option text="{!option}" value="{!option}" />
+            </aura:iteration>
+        </lightning:select>
+        <aura:if isTrue="{!v.emailBody}">
+            <label class="slds-form-element__label" for="form-element-01">Subject</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="txtSubject" class="slds-input" value="{!v.subject}" disabled="true"/>
+            </div>
+            <label class="slds-form-element__label" for="form-element-01">Message</label>
+            <div class="slds-form-element__control">
+                <lightning:inputRichText value="{!v.myMessage}" placeholder="Type something interesting" disabled="true"/>
+            </div>
+            <br/>
+            <lightning:button variant="success" label="Send Email" title="Send Email" onclick="{!c.Send}"/>  
+        </aura:if>
+    </div>
+    </lightning:card>
+ </aura:component>

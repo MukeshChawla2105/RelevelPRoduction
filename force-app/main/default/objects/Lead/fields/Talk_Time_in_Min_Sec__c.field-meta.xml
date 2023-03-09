@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Talk_Time_in_Min_Sec__c</fullName>
+    <externalId>false</externalId>
+    <formula>FLOOR(Connected_Call_Time_in_Seconds__c /60) + MOD(Connected_Call_Time_in_Seconds__c,60)/100</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Talk Time in Min &amp; Sec</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

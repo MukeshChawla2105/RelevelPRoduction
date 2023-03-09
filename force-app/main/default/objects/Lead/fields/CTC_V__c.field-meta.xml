@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CTC_V__c</fullName>
+    <externalId>false</externalId>
+    <label>CTC (V)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Work_Experience__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-3 L</fullName>
+                <default>false</default>
+                <label>0-3 L</label>
+            </value>
+            <value>
+                <fullName>3-5 L</fullName>
+                <default>false</default>
+                <label>3-5 L</label>
+            </value>
+            <value>
+                <fullName>5-8 L</fullName>
+                <default>false</default>
+                <label>5-8 L</label>
+            </value>
+            <value>
+                <fullName>8 L+</fullName>
+                <default>false</default>
+                <label>8 L+</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>0-1 year</controllingFieldValue>
+            <controllingFieldValue>1-3 years</controllingFieldValue>
+            <valueName>0-3 L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0-1 year</controllingFieldValue>
+            <controllingFieldValue>1-3 years</controllingFieldValue>
+            <valueName>3-5 L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0-1 year</controllingFieldValue>
+            <controllingFieldValue>1-3 years</controllingFieldValue>
+            <valueName>5-8 L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0-1 year</controllingFieldValue>
+            <controllingFieldValue>1-3 years</controllingFieldValue>
+            <valueName>8 L+</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

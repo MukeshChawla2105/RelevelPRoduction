@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DM_Junk</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>First_Activity_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>6/1/2022</value>
+    </filters>
+    <filters>
+        <field>Lead_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Unassigned,New,Called</value>
+    </filters>
+    <filters>
+        <field>Lead_status__c</field>
+        <operation>equals</operation>
+        <value>No access to desktop/laptop,Cannot understand English,Do not have laptop/desktop,Can not understand English,Can not pay 1st EMI as well,Age Bar,Poor Communication,Not a Graduate</value>
+    </filters>
+    <filters>
+        <field>Source_Intent__c</field>
+        <operation>equals</operation>
+        <value>Digital-Marketing</value>
+    </filters>
+    <label>DM Junk</label>
+    <sharedTo>
+        <role>Senior_Sales_Manager_Shubham_sharma</role>
+    </sharedTo>
+</ListView>

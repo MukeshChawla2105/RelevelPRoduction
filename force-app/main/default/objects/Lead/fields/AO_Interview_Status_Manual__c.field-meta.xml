@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AO_Interview_Status_Manual__c</fullName>
+    <externalId>false</externalId>
+    <label>AO Interview Status (Manual)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Learner No-Show</fullName>
+                <default>false</default>
+                <label>Learner No-Show</label>
+            </value>
+            <value>
+                <fullName>AO No-Show</fullName>
+                <default>false</default>
+                <label>AO No-Show</label>
+            </value>
+            <value>
+                <fullName>Conducted</fullName>
+                <default>false</default>
+                <label>Conducted</label>
+            </value>
+            <value>
+                <fullName>Joined &amp; Dropped</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Joined &amp; Dropped</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HR_Churn_Filter</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Temperature__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Relevel_lead_score__c</columns>
+    <columns>Source_Intent__c</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>SM__c</columns>
+    <columns>SSM__c</columns>
+    <columns>Connected_Call_Time_in_Seconds__c</columns>
+    <columns>Last_Activity_Date__c</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>Talk_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>First_Activity_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>5/20/2022</value>
+    </filters>
+    <filters>
+        <field>Lead_Stage__c</field>
+        <operation>equals</operation>
+        <value>Nurturing</value>
+    </filters>
+    <filters>
+        <field>Talk_Time__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1800</value>
+    </filters>
+    <filters>
+        <field>Source_Intent__c</field>
+        <operation>equals</operation>
+        <value>hr-generalist</value>
+    </filters>
+    <filters>
+        <field>Temperature__c</field>
+        <operation>equals</operation>
+        <value>Hot,Warm</value>
+    </filters>
+    <label>HR - Churn Filter</label>
+</ListView>

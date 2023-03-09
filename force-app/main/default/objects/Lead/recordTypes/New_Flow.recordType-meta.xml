@@ -1,0 +1,4580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Flow</fullName>
+    <active>true</active>
+    <businessProcess>New Lead Process</businessProcess>
+    <label>New Flow</label>
+    <picklistValues>
+        <picklist>AO_Interview_Status_Manual__c</picklist>
+        <values>
+            <fullName>AO No-Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conducted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner No-Show</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Admission_Letter_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Admission_roll_out_Final__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_form_completed__c</picklist>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interview Slot Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bank_Statement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Branch__c</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Animation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aviation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS %26 IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Civil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instrumentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paramedical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterinary Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocational Courses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CTC_V__c</picklist>
+        <values>
+            <fullName>0-3 L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-5 L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5-8 L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 L%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>College_City__c</picklist>
+        <values>
+            <fullName>Agra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ahmedabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aizawl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ajmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aligarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allahabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alwar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amravati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amritsar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anantapur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arrah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asansol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aurangabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahadurgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ballia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangalore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banswara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barasat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bardhaman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bardoli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bareilly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bastar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bathinda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belagavi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgaum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bellary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Berhampur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhagalpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bharatpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhilai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhiwani</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhopal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhubaneswar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bikaner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bilaspur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birbhum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calicut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chaibasa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chandigarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chennai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhatarpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chidambaram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chittorgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Churu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coimbatore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cooch Behar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuttack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darbhanga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darjeeling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Davanagere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dehradun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dhanbad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dibrugarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faizabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faridkot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gadchiroli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gandhi Nagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gangtok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garhwal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gobindgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gorakhpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Noida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gulbarga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guntur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gurgaon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guwahati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gwalior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamirpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hapur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hazaribagh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hisar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Howrah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hubli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hyderabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Imphal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itanagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jabalpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jalandhar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jalgaon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamnagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaunpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jhansi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jhunjhunu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jorhat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junagadh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kadapa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kakinada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kalyani</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kangra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kannur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kanpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karaikudi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karim Nagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kasaragod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kheda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kochi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kokrajhar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kolar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kolhapur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kolkata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kozhikode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Krishnankovil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kurnool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kurukshetra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lonere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucknow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ludhiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machilipatnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhuban</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madurai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahabub Nagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mangalore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meerut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mehsana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midnapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mohali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moradabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motihari</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Munger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muzaffarpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mysore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nainital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nalanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nalgonda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nanded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Narnaul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nashik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Navi Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nizamabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palakkad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palampur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pantnagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patiala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilani</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pondicherry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pune</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purandarpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raiganj</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajahmundhry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajkot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ranchi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rewa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rewari</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rohtak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roorkee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rourkela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saharanpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sambalpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shikohabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shimla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shimoga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siddharthnagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silchar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sirsa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siruseri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solapur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonepat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sri City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Srinagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surathkal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surguja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tehri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tezpur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thanjavur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiruvananthapuram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thrissur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiruchirappalli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tirunelveli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tirupati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumkur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Udaipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ujjain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vadodara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vallabh Vidyanagar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Varanasi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vellore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vijayawada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visakhapatnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warangal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zunhebotto</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>College_State__c</picklist>
+        <values>
+            <fullName>ANDHRA PRADESH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASSAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arunachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhattisgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIMACHAL PRADESH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JHARKHAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu and Kashmir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhya Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mizoram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagaland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORISSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Odisha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTARANCHAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttarakhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>College_Year_Fess__c</picklist>
+        <values>
+            <fullName>%C2%A015 Lac to 20 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0 to 50K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Lac to 3 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 Lac to 15 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Lac%C2%A0%2B%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Lac to 5 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Lac to 7 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50K to 1 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 Lac to 10 Lac</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Communication__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Course_Name__c</picklist>
+        <values>
+            <fullName>Backend Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Analytics Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Development-Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Science Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Marketing Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontend Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fullstack Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources Generalist Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Management Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Management Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Testing Course</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Course_Selected__c</picklist>
+        <values>
+            <fullName>Advanced Certificate in Information Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Certificate in Power Distribution Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Anthropology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Political Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Public Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Hons%2E Sociology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Political Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Public Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Sanskrit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Sociology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Tourism Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Arts BA Urdu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Business Administration BBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Business Administration BBA Retail Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Commerce B%2ECom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Computer Applications BCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Education B%2EEd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Aeronautical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Applied Electronics %26 Instrumentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Automobile Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Biomedical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Chemical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Civil Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Computer Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Computer Science and Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Electrical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Electrical and Electronics Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Electronics %26 Communication Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Electronics Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Electronics and Instrumentation Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Environmental Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Industrial %26 Production Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Industrial Engineering %26 Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Mechanical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Mining Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Petrochemical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Engineering BE Textile Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Library and Information Science B%2ELib%2EI%2ESc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Botany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Chemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Geography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Geology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Hons%2E Anthropology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Hons%2E Biochemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Physics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Science B%2ESc Zoology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Social Work BSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Technology B%2ETech %2B Master of Technology M%2ETech Civil Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Technology B%2ETech %2B Master of Technology M%2ETech Computer Science %26 Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Technology B%2ETech %2B Master of Technology M%2ETech Electrical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor of Technology B%2ETech %2B Master of Technology M%2ETech Mechanical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor%27s Preparatory Programme BPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Dairy Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in First Aid and Safety Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Food and Beverage Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Functional English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Geriatric Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Human Rights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Korean Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Library and Information Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Mobile Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Organic Farming COF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Persian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Phlebotomy Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Population and Sustainable Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Sericulture CIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Tribal Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Urdu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Value Added Products from Fruits and Vegetables</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Course in Yoga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate In Co-Operation%2C Co-Operative Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate In Communication and IT Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate course in Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate course in Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Adolescent Health and Counseling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Anti Human Trafficking CAHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Bee Keeping CIB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Business Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Care Waste Management CHCWM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Community Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Consumer Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Disaster Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Energy Technology and Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Environmental Studies CES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Fashion Designing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Front Office Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Gender%2C Agriculture and Sustainable Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in General Duty Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Geriatric Care Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Goods and Services Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Guidance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in HIV and Family Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Health Care Waste Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Home Based Care Provider CHBCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Home Health Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Human Rights and Value Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in International Humanitarian Law CIHL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Laboratory Techniques</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Life and Thought</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Maternal and Child Health Care CMCHC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in NGO Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Newborn and Infant Care CNIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Nutrition and Child Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Peace Studies and Conflict Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Performing Arts - Bharatnatyam CPABN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Performing Arts - Hindustani Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Performing Arts - Karnatak Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Performing Arts - Theatre Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Poultry Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Rural Development CRD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Social Work and Criminal Justice System CSWCJS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Solid Waste Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Teaching of English as a Second Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Teaching of Primary School Mathematic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Tourism Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Value Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Visual Arts - Applied Arts CVAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Visual Arts - Painting CVAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate in Water Harvesting and Management CWHM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate of Competency in Power Distribution CCPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certified Course in Food and Nutrition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certified Course in Teaching of English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma German Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma In Production Of Value Added Products From Cereals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Aquaculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Business Process Outsourcing Finance and Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Creative Writing in English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Critical Care Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Dairy Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Early Childhood Care and Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Fish Products Technology DFPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in HIV and Family Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Horticulture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Meat Technology DMT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Modern Office Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Nursing Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Nutrition and Health Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Panchayat Level Administration %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Paralegal Practice DIPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Retailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Teaching German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Theatre Art</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Tourism Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Urdu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Value Added Products from Fruits and Vegetables DVAPFV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Value Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Watershed Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in WomenÃ%C2%A2â%E2%80%9A%C2%ACâ%E2%80%9E%C2%A2s Empowerment and Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Chemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Commerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Distance Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Geography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Journalism and Mass Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Political Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Social Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Sociology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Theatre Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2EPhil%2E Translation Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master in Social Work MSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Adult Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Anthropology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Distance Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Folklore and Culture Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Gandhi and Peace Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Gender and Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Jyotish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Mass Communication %26 Journalism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Philosophy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Political Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Public Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Rural Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Sanskrit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Sociology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Translation Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Arts MA Women and Gender Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Business Administration MBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Business Administration MBA Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Business Administration MBA Banking and Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Business Administration MBA Human Resource Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Business Administration MBA Integrated Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Commerce M%2ECom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Commerce M%2ECom Business Policy and Corporate Governance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Commerce M%2ECom Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Commerce M%2ECom Management Accounting %26 Financial Strategies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Computer Applications M%2EC%2EA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Education M%2EEd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Advanced Production System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Automobile Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME CAD%2FCAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Chemical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Communication Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Computer Aided Design of Structures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Computer Science and Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Computer Technology %26 Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Construction Engineering and Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Digital Communication %26 Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Digital Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Electronics %26 Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Embedded System and VLSI Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Embedded Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Environment Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Environmental Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Heat Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME High Voltage Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Industrial Engineering %26 Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Machine Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Mechanical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Engineering ME Microwave %26 Radar Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Library and Information Science M%2ELib%2EI%2ESc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Science M%2ESc Counseling and Family Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Science M%2ESc Environmental Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Science M%2ESc Food Nutrition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Science M%2ESc Mathematics with Computer Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Social Work MSW Counselling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master of Tourism and Travel Management MTTM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG Diploma in Disaster Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Anthropology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Biochemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Chemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Commerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Computer Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Dairy Science and Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Distance Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Environmental Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Extension and Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Food and Nutrition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Gender Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Geography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Geology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Interdisciplinary courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Journalism and Mass Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Library %26 Information Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Life Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Physics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Political Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Public Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Rural Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Social Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Sociology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Translation Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Travel%2C Tourism and Hospitality Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Visual Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Vocational Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED%2E Women Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post  Graduate Diploma in Higher Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post  Graduate Diploma in Operations Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate Course in Womenâ%E2%82%AC%E2%84%A2s Studies PGCCWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Adult Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Agriculture Policy PGCAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Bangla-Hindi Translation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Climate Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Cyber Law PGCCL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Extension and Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Gandhi and Peace Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Geoinformatics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Industrial Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Information and Assistive Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Inventory Planning and Warehousing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Malayalam-Hindi Translation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Medical Management of CBRNE Disasters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Certificate in Patent Practice PGCPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma In Environment And Sustainable Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma In Plantation Management PGDPM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma Intellectual Property Rights Law PGDIPRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Adult Education %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Analytical Chemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Animal Welfare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Applied Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Audio Programme Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Book Publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Computer Applications PGDCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Corporate Social Responsibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Criminal Justice PGDCJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Development Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Disaster Management and Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Educational Management and Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Educational Planning and Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Educational Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Environmental and Occupational Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Extension and Development Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Family and Health Counselling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Folklore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Food Safety and Quality Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Gandhian and Peace Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Gender Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Geriatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in HIV Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Hospital and Health Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Hospitality Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Information Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in International Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Journalism and Mass Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Library Automation and Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Marketing Management PGDMM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Maternal and Child Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Mental Health Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Pharmaceutical Sales Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Pre- Primary Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Rural Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in School Leadership and Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Social Work PGDSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Sustainability Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Translation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Urban Planning and Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Graduate Diploma in Women%27s %26 Gender Studies</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_College_Year__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Salary__c</picklist>
+        <values>
+            <fullName>%C2%A03 Lac%C2%A0%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0 to 30K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Lac to 1%2E5 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5 Lac to 2 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Lac to 3 Lac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30k to 50K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50K to 1 Lac</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>District__c</picklist>
+        <values>
+            <fullName>Alappuzha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ernakulam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idukki</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kannur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kasaragod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kollam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kottayam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kozhikode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malappuram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palakkad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pathanamthitta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiruvananthapuram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thrissur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wayanad</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employment_Type__c</picklist>
+        <values>
+            <fullName>Salaried</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self Employed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finance_Sale__c</picklist>
+        <values>
+            <fullName>Invalid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Financials__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Goal_Interested_In__c</picklist>
+        <values>
+            <fullName>Associate-Product-Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backend-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Development-Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data-Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital-Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontend-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full-Stack-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphic-Designer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR-Generalist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical-Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software-Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>operations-associate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Highest_degree_V__c</picklist>
+        <values>
+            <fullName>Bachelors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class 12th</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masters</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Highest_degree__c</picklist>
+        <values>
+            <fullName>Bachelors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class 12th</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masters</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inbound_Call_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Answer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intent__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Reminder_Call_AC_No__c</picklist>
+        <values>
+            <fullName>Agreed to Join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awareness - Has no clue about Course%2FCompany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Can not Understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied to Join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not pick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dropped the call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up for confirmation on time %26 day slot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics - Laptop%2FInternet Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Issue - Need time for arrangement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Might be Interested for future cohorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reachable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Relevant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Persona Mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switched Off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Reminder_Call_AC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Schedule_Confirmed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Scheduled_AC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Scheduled_Sub_Status_AC__c</picklist>
+        <values>
+            <fullName>Awareness - Has no clue about Course%2FCompany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call not Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Can not Understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dropped the call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up for confirmation on time %26 day slot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner Disconnected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics - Laptop%2FInternet Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Issue - Need time for arrangement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Might be Interested for future cohorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Relevant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Responding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Persona Mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switched Off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Scheduled_Sub_Status__c</picklist>
+        <values>
+            <fullName>Awareness - Has no clue about Course%2FCompany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call not Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Can not Understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dropped the call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up for confirmation on time %26 day slot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner Disconnected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics - Laptop%2FInternet Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Issue - Need time for arrangement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Might be Interested for future cohorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reachable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Relevant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Responding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Persona Mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF Issue%2FCall Not Going Through</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switched Off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Scheduled_Super_Sub_Status__c</picklist>
+        <values>
+            <fullName>Awareness - Has no clue about Course%2FCompany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not pick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up for confirmation on time %26 day slot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Might be Interested for future cohorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reachable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switched Off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Status_AO__c</picklist>
+        <values>
+            <fullName>Conducted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Conducted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Sub_Status_AO__c</picklist>
+        <values>
+            <fullName>AO - No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Requested for reschedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erroneous Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expectation Mismatch %284Ps%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect%2FFalse Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner - No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner not prepared%2Fnot ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learner was not prepared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics - Laptop%2FInternet Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested%2F Mind Changed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reschedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescheduled by Learner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled outside working hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Challenges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time slot miss Match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Prepared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Schedule Conducted by AC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interview_Type__c</picklist>
+        <values>
+            <fullName>Later</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Now</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Stage__c</picklist>
+        <values>
+            <fullName>Called</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conducted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Rolled Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unassigned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Substatus__c</picklist>
+        <values>
+            <fullName>NONE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Version__c</picklist>
+        <values>
+            <fullName>V1</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_status__c</picklist>
+        <values>
+            <fullName>Age Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can not pay 1st EMI as well</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can not understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not Enquire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not have laptop%2Fdesktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled for another Program with us</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee is High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joined%2FWill join competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Just Checking Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for WFH jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for another Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Next Batch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No access to desktop%2Flaptop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a Graduate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professionally Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Score is low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travelling Abroad %2F Onsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Experience</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Logistics__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Invalid Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupation_Profession__c</picklist>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working Professional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outbound_Call_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Answer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Link_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Mode__c</picklist>
+        <values>
+            <fullName>Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Shot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Not_Made__c</picklist>
+        <values>
+            <fullName>%22Status of payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28Payment Not Made%29%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defferred Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not have required docs for loan process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Down Payment Challenge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled with Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Got Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for more discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NATC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need higher Loan Tenure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Responding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Category__c</picklist>
+        <values>
+            <fullName>Air Conditioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air Cooler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chimney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cooker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DVD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dish Washer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric Access18%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric Cooker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric Iron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Lamp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freezer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grinder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Induction Cooker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invertor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juicer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kettle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LED TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LED TV BEL 33 INCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LPG Stove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lantern LED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laptop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Equp 12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Equp 18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microwave Oven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multimedia Speakers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refrigerator-DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refrigerator-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sewing Machine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soda Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stabilizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utensils</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vaccum Cleaner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washing Machine-FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washing Machine-SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water Cooler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water Heater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water Purifier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profession__c</picklist>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working Professional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recommended_Course_Offer__c</picklist>
+        <values>
+            <fullName>Backend Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Analytics Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Science Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Marketing Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontend Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fullstack Development Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources Generalist Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Management Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Management Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Testing Course</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recommended_Course__c</picklist>
+        <values>
+            <fullName>Iconic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Referrals__c</picklist>
+        <values>
+            <fullName>No Values</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relevance_Experience__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remarketing_Transferred_Stage__c</picklist>
+        <values>
+            <fullName>Called</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unassigned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salary_Slip__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_Admission_Letter_Sub_Status__c</picklist>
+        <values>
+            <fullName>Communication - Does not understand English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial constraint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interview Conducted Status not marked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Intent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA Declined after the Audit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_Intent__c</picklist>
+        <values>
+            <fullName>Associate-Product-Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backend-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business-Development-Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data-Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital-Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontend-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full-Stack-Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphic-Designer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical-Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software-Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>android-development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hr-generalist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>operations-associate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_of_payment__c</picklist>
+        <values>
+            <fullName>Call Not Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Status_of_Payment__c</picklist>
+        <values>
+            <fullName>Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defferred Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not pick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not have required docs for loan process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Down Payment Challenge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled with Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Followup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Got Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for more discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NATC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need higher Loan Tenure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reachable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Ready to share Documents for loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Responding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switched Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Temperature__c</picklist>
+        <values>
+            <fullName>Agreed to pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arranging funds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled with competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs more time to decide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parents%27 approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment not going through</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment postponed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for next cohort</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Temperature__c</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Total_Work_Experience__c</picklist>
+        <values>
+            <fullName>0-1 year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-3 years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2B years</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Work_Experience__c</picklist>
+        <values>
+            <fullName>0-1 year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-3 years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-5 years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>reason__c</picklist>
+        <values>
+            <fullName>Get a promotion at my current job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase my salary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learn new skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for my first job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking to change my job industry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Idle_Slot_Time__c</fullName>
+    <externalId>false</externalId>
+    <label>Min Idle Slot Time</label>
+    <summarizedField>Idle_Time_Report__c.Total_Idle_Time__c</summarizedField>
+    <summaryForeignKey>Idle_Time_Report__c.Daily_Idle_View__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

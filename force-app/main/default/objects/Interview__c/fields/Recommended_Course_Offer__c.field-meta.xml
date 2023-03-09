@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommended_Course_Offer__c</fullName>
+    <externalId>false</externalId>
+    <label>Recommended Course (Offer)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Analytics Course</fullName>
+                <default>false</default>
+                <label>Business Analytics Course</label>
+            </value>
+            <value>
+                <fullName>Operations Management Course</fullName>
+                <default>false</default>
+                <label>Operations Management Course</label>
+            </value>
+            <value>
+                <fullName>Digital Marketing Course</fullName>
+                <default>false</default>
+                <label>Digital Marketing Course</label>
+            </value>
+            <value>
+                <fullName>Business Development Course</fullName>
+                <default>false</default>
+                <label>Business Development Course</label>
+            </value>
+            <value>
+                <fullName>Human Resources Generalist Course</fullName>
+                <default>false</default>
+                <label>Human Resources Generalist Course</label>
+            </value>
+            <value>
+                <fullName>Product Management Course</fullName>
+                <default>false</default>
+                <label>Product Management Course</label>
+            </value>
+            <value>
+                <fullName>Data Science Course</fullName>
+                <default>false</default>
+                <label>Data Science Course</label>
+            </value>
+            <value>
+                <fullName>Backend Development Course</fullName>
+                <default>false</default>
+                <label>Backend Development Course</label>
+            </value>
+            <value>
+                <fullName>Fullstack Development Course</fullName>
+                <default>false</default>
+                <label>Fullstack Development Course</label>
+            </value>
+            <value>
+                <fullName>Software Testing Course</fullName>
+                <default>false</default>
+                <label>Software Testing Course</label>
+            </value>
+            <value>
+                <fullName>Frontend Development Course</fullName>
+                <default>false</default>
+                <label>Frontend Development Course</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

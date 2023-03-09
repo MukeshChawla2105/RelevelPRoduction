@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Idle_View__c</fullName>
+    <externalId>false</externalId>
+    <label>Daily Idle View</label>
+    <referenceTo>Daily_Idle_View__c</referenceTo>
+    <relationshipLabel>Idle Time Reports</relationshipLabel>
+    <relationshipName>Idle_Time_Reports</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

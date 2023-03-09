@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Admission_Letter_Sub_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Send Admission Letter Sub-Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Interview Conducted Status not marked</fullName>
+                <default>false</default>
+                <label>Interview Conducted Status not marked</label>
+            </value>
+            <value>
+                <fullName>QA Declined after the Audit</fullName>
+                <default>false</default>
+                <label>QA Declined after the Audit</label>
+            </value>
+            <value>
+                <fullName>Logistics Issue</fullName>
+                <default>false</default>
+                <label>Logistics Issue</label>
+            </value>
+            <value>
+                <fullName>Financial constraint</fullName>
+                <default>false</default>
+                <label>Financial constraint</label>
+            </value>
+            <value>
+                <fullName>Communication - Does not understand English</fullName>
+                <default>false</default>
+                <label>Communication - Does not understand English</label>
+            </value>
+            <value>
+                <fullName>No Intent</fullName>
+                <default>false</default>
+                <label>No Intent</label>
+            </value>
+            <value>
+                <fullName>Language Barrier</fullName>
+                <default>false</default>
+                <label>Language Barrier</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

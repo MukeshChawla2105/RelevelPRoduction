@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Abrupt_Call_Disconnections__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RA - Abrupt Call Disconnections (BDE disconnects before the call has concluded)</description>
+    <externalId>false</externalId>
+    <label>Abrupt Call Disconnections</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

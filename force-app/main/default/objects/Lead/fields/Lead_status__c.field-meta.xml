@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_status__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Stage__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Payment Made</fullName>
+                <default>false</default>
+                <label>Payment Made</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Junk</fullName>
+                <default>false</default>
+                <label>Junk</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Not interested</fullName>
+                <default>false</default>
+                <label>Not interested</label>
+            </value>
+            <value>
+                <fullName>Not Contact</fullName>
+                <default>false</default>
+                <label>Not Contact</label>
+            </value>
+            <value>
+                <fullName>No access to desktop/laptop</fullName>
+                <default>false</default>
+                <label>No access to desktop/laptop</label>
+            </value>
+            <value>
+                <fullName>Cannot understand English</fullName>
+                <default>false</default>
+                <label>Cannot understand English</label>
+            </value>
+            <value>
+                <fullName>Just Checking Details</fullName>
+                <default>false</default>
+                <label>Just Checking Details</label>
+            </value>
+            <value>
+                <fullName>Joined/Will join competitor</fullName>
+                <default>false</default>
+                <label>Joined/Will join competitor</label>
+            </value>
+            <value>
+                <fullName>Fee is High</fullName>
+                <default>false</default>
+                <label>Fee is High</label>
+            </value>
+            <value>
+                <fullName>Next Batch</fullName>
+                <default>false</default>
+                <label>Next Batch</label>
+            </value>
+            <value>
+                <fullName>Professionally Busy</fullName>
+                <default>false</default>
+                <label>Professionally Busy</label>
+            </value>
+            <value>
+                <fullName>Personal Reason</fullName>
+                <default>false</default>
+                <label>Personal Reason</label>
+            </value>
+            <value>
+                <fullName>Travelling Abroad / Onsite</fullName>
+                <default>false</default>
+                <label>Travelling Abroad / Onsite</label>
+            </value>
+            <value>
+                <fullName>Looking for another Program</fullName>
+                <default>false</default>
+                <label>Looking for another Program</label>
+            </value>
+            <value>
+                <fullName>Enrolled for another Program with us</fullName>
+                <default>false</default>
+                <label>Enrolled for another Program with us</label>
+            </value>
+            <value>
+                <fullName>Did not Enquire</fullName>
+                <default>false</default>
+                <label>Did not Enquire</label>
+            </value>
+            <value>
+                <fullName>Looking for WFH jobs</fullName>
+                <default>false</default>
+                <label>Looking for WFH jobs</label>
+            </value>
+            <value>
+                <fullName>Do not have laptop/desktop</fullName>
+                <default>false</default>
+                <label>Do not have laptop/desktop</label>
+            </value>
+            <value>
+                <fullName>Can not understand English</fullName>
+                <default>false</default>
+                <label>Can not understand English</label>
+            </value>
+            <value>
+                <fullName>Can not pay 1st EMI as well</fullName>
+                <default>false</default>
+                <label>Can not pay 1st EMI as well</label>
+            </value>
+            <value>
+                <fullName>Loan Rejected</fullName>
+                <default>false</default>
+                <label>Loan Rejected</label>
+            </value>
+            <value>
+                <fullName>Work Experience</fullName>
+                <default>false</default>
+                <label>Work Experience</label>
+            </value>
+            <value>
+                <fullName>Age Bar</fullName>
+                <default>false</default>
+                <label>Age Bar</label>
+            </value>
+            <value>
+                <fullName>Poor Communication</fullName>
+                <default>false</default>
+                <label>Poor Communication</label>
+            </value>
+            <value>
+                <fullName>Not a Graduate</fullName>
+                <default>false</default>
+                <label>Not a Graduate</label>
+            </value>
+            <value>
+                <fullName>Score is low</fullName>
+                <default>false</default>
+                <label>Score is low</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>Called</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Follow-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Called</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Junk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>Called</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unassigned</controllingFieldValue>
+            <controllingFieldValue>Called</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>No access to desktop/laptop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Cannot understand English</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Just Checking Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Joined/Will join competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Fee is High</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Next Batch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Professionally Busy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Personal Reason</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Travelling Abroad / Onsite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Looking for another Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Enrolled for another Program with us</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Did not Enquire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Looking for WFH jobs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Do not have laptop/desktop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Can not understand English</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Can not pay 1st EMI as well</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Loan Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Work Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Age Bar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Poor Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Not a Graduate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Nurturing</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <controllingFieldValue>Offer Rolled Out</controllingFieldValue>
+            <valueName>Score is low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Payment Made</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

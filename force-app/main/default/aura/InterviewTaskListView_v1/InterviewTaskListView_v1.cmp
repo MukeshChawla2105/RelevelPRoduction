@@ -1,0 +1,218 @@
+<aura:component controller="InterviewTaskListViewHelper" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="data" type="List" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="sortDirection" type="String" default="asc" />
+    <aura:attribute name="defaultSortDirection" type="String" default="asc" />
+    <aura:attribute name="sortedBy" type="String" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:attribute name="oldListLength" type="integer" default="0" />
+    <aura:attribute name="newListLength" type="integer" default="0" />
+    
+    <lightning:card >
+        <lightning:tabset>
+            <lightning:tab label="Open Tasks">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Opportunity Name">Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account Name">Subject</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Close Date">Assigned Date</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Stage">Assigned To</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Confidence">Status</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Amount">Priority</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact">Meeting Link</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.data}" var="taskRec">  
+                            <aura:if isTrue="{!taskRec.status == 'Open'}">
+                                <tr class="slds-hint-parent">
+                                    <th data-label="Lead" scope="row">
+                                        <div class="slds-truncate" value="{!taskRec.leadId}" title="{!taskRec.name}">
+                                            <a target="_blank" href="{!$Site.CurrentSiteUrl+'/lightning/r/Lead/'+taskRec.leadId+'/view'}" tabindex="-1">{!taskRec.name}</a>
+                                        </div>
+                                    </th>
+                                    <td data-label="Task Subject">
+                                        <div class="slds-truncate" title="Task Subject">
+                                            <a target="_blank" href="{!$Site.CurrentSiteUrl+'/lightning/r/Lead/'+taskRec.taskId+'/view'}" tabindex="-1">{!taskRec.subject}</a>
+                                        </div>
+                                    </td>
+                                    <td data-label="Created Date">
+                                        <div class="slds-truncate" title="{!taskRec.assignedDate}">
+                                            <lightning:formattedDateTime aura:id="dt"
+                                                                         value="{!taskRec.assignedDate}"
+                                                                         month="short"
+                                                                         day="numeric"
+                                                                         year="numeric"
+                                                                         hour="2-digit"
+                                                                         minute="2-digit"
+                                                                         second="2-digit"
+                                                                         hour12="true"
+                                                                         timeZone="{!$Locale.timezone}"/>
+                                        </div>
+                                    </td>
+                                    <td data-label="Owner">
+                                        <div class="slds-truncate" title="{!taskRec.assignedTo}">{!taskRec.assignedTo}</div>
+                                    </td>
+                                    <td data-label="status">
+                                        <div class="slds-truncate" title="{!taskRec.status}">{!taskRec.status}</div>
+                                    </td>
+                                    <td data-label="priority">
+                                        <div class="slds-truncate" title="{!taskRec.priority}">{!taskRec.priority}</div>
+                                    </td>
+                                    <td data-label="Meeting Link">
+                                        <div class="slds-truncate" title="{!taskRec.meetingLink}">
+                                            <a target="_blank" href="{!taskRec.meetingLink}" >{!taskRec.meetingLink}</a>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                            </aura:if>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </lightning:tab>
+            <lightning:tab label="Completed Tasks" >
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered " aria-labelledby="element-with-table-label other-element-with-table-label" >
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Opportunity Name">Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account Name">Subject</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Close Date">Assigned Date</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Stage">Assigned To</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Confidence">Status</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Amount">Priority</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact">Meeting Link</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact">Course Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact">AC Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact">Total Call Post Interview</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact"> Connected Call Post Interview</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Contact"> Interview Feedback Notes AO</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.data}" var="taskRec">  
+                            <aura:if isTrue="{!taskRec.status == 'Completed'}">
+                                <tr class="slds-hint-parent ">
+                                    <th data-label="Lead" scope="row">
+                                        <div class="slds-truncate" value="{!taskRec.leadId}" title="{!taskRec.name}">
+                                            <a target="_blank" href="{!$Site.CurrentSiteUrl+'/lightning/r/Lead/'+taskRec.leadId+'/view'}" tabindex="-1">{!taskRec.name}</a>
+                                        </div>
+                                    </th>
+                                    <td data-label="Task Subject">
+                                        <div class="slds-truncate" title="Task Subject">
+                                            <a target="_blank" href="{!$Site.CurrentSiteUrl+'/lightning/r/Lead/'+taskRec.taskId+'/view'}" tabindex="-1">{!taskRec.subject}</a>
+                                        </div>
+                                    </td>
+                                    <td data-label="Created Date">
+                                        <div class="slds-truncate" title="{!taskRec.assignedDate}">
+                                            <lightning:formattedDateTime aura:id="dt"
+                                                                         value="{!taskRec.assignedDate}"
+                                                                         month="short"
+                                                                         day="numeric"
+                                                                         year="numeric"
+                                                                         hour="2-digit"
+                                                                         minute="2-digit"
+                                                                         second="2-digit"
+                                                                         hour12="true"
+                                                                         timeZone="{!$Locale.timezone}"/>
+                                        </div>
+                                    </td>
+                                    <td data-label="Owner">
+                                        <div class="slds-truncate" title="{!taskRec.assignedTo}">{!taskRec.assignedTo}</div>
+                                    </td>
+                                    <td data-label="status">
+                                        <div class="slds-truncate" title="{!taskRec.status}">{!taskRec.status}</div>
+                                    </td>
+                                    <td data-label="priority">
+                                        <div class="slds-truncate" title="{!taskRec.priority}">{!taskRec.priority}</div>
+                                    </td>
+                                    <td data-label="Meeting Link">
+                                        <div class="slds-truncate" title="{!taskRec.meetingLink}">
+                                            <a target="_blank" href="{!taskRec.meetingLink}" >{!taskRec.meetingLink}</a>
+                                        </div>
+                                    </td>
+                                    
+                                    
+                                    
+                                    
+                                    <td data-label="courseName">
+                                        <div class="slds-truncate" title="{!taskRec.courseName}">
+                                            <a target="_blank" href="{!taskRec.courseName}" >{!taskRec.courseName}</a>
+                                        </div>
+                                    </td>
+                                    
+                                    <td data-label="acName">
+                                        <div class="slds-truncate" title="{!taskRec.acName}">
+                                            <a target="_blank" href="{!taskRec.acName}" >{!taskRec.acName}</a>
+                                        </div>
+                                    </td>
+                                    <td data-label="totalcallsPostInterview">
+                                        <div class="slds-truncate" title="{!taskRec.totalcallsPostInterview}">
+                                            <a target="_blank" href="{!taskRec.totalcallsPostInterview}" >{!taskRec.totalcallsPostInterview}</a>
+                                        </div>
+                                    </td>
+                                    
+                                    <td data-label="connectedCallPostInterview">
+                                        <div class="slds-truncate" title="{!taskRec.connectedCallPostInterview}">
+                                            <a target="_blank" href="{!taskRec.connectedCallPostInterview}" >{!taskRec.connectedCallPostInterview}</a>
+                                        </div>
+                                    </td>
+                                    
+                                    <td data-label="interviewFeedbackNotesAO">
+                                        <div class="slds-truncate" title="{!taskRec.interviewFeedbackNotesAO}">
+                                            <a target="_blank" href="{!taskRec.interviewFeedbackNotesAO}" >{!taskRec.interviewFeedbackNotesAO}</a>
+                                        </div>
+                                    </td>
+                                    
+                                    
+                                </tr>
+                            </aura:if>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </lightning:tab>
+            
+        </lightning:tabset>
+    </lightning:card>
+    
+</aura:component>

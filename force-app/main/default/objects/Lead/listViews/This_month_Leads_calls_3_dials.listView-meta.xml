@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_month_Leads_calls_3_dials</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>SM__c</columns>
+    <columns>Lead_Stage__c</columns>
+    <columns>Lead_status__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Total_Call_Count__c</columns>
+    <columns>Source_Intent__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Relevel_lead_score__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>New_Lead_Assigned_DateTime__c</columns>
+    <columns>Last_Activity_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Total_Call_Count__c</field>
+        <operation>lessOrEqual</operation>
+        <value>5</value>
+    </filters>
+    <filters>
+        <field>Course_Name__c</field>
+        <operation>equals</operation>
+        <value>Data Science Course,Backend Development Course,Fullstack Development Course,Software Testing Course,Frontend Development Course</value>
+    </filters>
+    <filters>
+        <field>New_Lead_Assigned_DateTime__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <filters>
+        <field>Lead_Stage__c</field>
+        <operation>equals</operation>
+        <value>Unassigned,New,Called,Nurturing</value>
+    </filters>
+    <label>This month Leads calls &gt;3 dials</label>
+    <sharedTo>
+        <role>Relevel_Admin</role>
+        <role>VP_Sales</role>
+        <roleAndSubordinates>VP_Sales</roleAndSubordinates>
+    </sharedTo>
+</ListView>

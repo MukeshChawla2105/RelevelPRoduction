@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Selected__c</fullName>
+    <externalId>false</externalId>
+    <label>Course Selected</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Hindi</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Hindi</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. History</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. History</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Political Science</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Political Science</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Psychology</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Psychology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Sociology</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Sociology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. English</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. English</label>
+            </value>
+            <value>
+                <fullName>Master of Education M.Ed</fullName>
+                <default>false</default>
+                <label>Master of Education M.Ed</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Geography</fullName>
+                <default>false</default>
+                <label>M.Phil. Geography</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Social Work</fullName>
+                <default>false</default>
+                <label>M.Phil. Social Work</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Translation Studies</fullName>
+                <default>false</default>
+                <label>M.Phil. Translation Studies</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Arabic</fullName>
+                <default>false</default>
+                <label>Ph.D. Arabic</label>
+            </value>
+            <value>
+                <fullName>Ph.D. French</fullName>
+                <default>false</default>
+                <label>Ph.D. French</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Gender Studies</fullName>
+                <default>false</default>
+                <label>Ph.D. Gender Studies</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Geography</fullName>
+                <default>false</default>
+                <label>Ph.D. Geography</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Library &amp; Information Science</fullName>
+                <default>false</default>
+                <label>Ph.D. Library &amp; Information Science</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Public Administration</fullName>
+                <default>false</default>
+                <label>Ph.D. Public Administration</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Rural Development</fullName>
+                <default>false</default>
+                <label>Ph.D. Rural Development</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Social Work</fullName>
+                <default>false</default>
+                <label>Ph.D. Social Work</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Translation Studies</fullName>
+                <default>false</default>
+                <label>Ph.D. Translation Studies</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Visual Arts</fullName>
+                <default>false</default>
+                <label>Ph.D. Visual Arts</label>
+            </value>
+            <value>
+                <fullName>Diploma German Language</fullName>
+                <default>false</default>
+                <label>Diploma German Language</label>
+            </value>
+            <value>
+                <fullName>Diploma in Creative Writing in English</fullName>
+                <default>false</default>
+                <label>Diploma in Creative Writing in English</label>
+            </value>
+            <value>
+                <fullName>Diploma in HIV and Family Education</fullName>
+                <default>false</default>
+                <label>Diploma in HIV and Family Education</label>
+            </value>
+            <value>
+                <fullName>Diploma in Tourism Studies</fullName>
+                <default>false</default>
+                <label>Diploma in Tourism Studies</label>
+            </value>
+            <value>
+                <fullName>Diploma in Urdu</fullName>
+                <default>false</default>
+                <label>Diploma in Urdu</label>
+            </value>
+            <value>
+                <fullName>Post  Graduate Diploma in Higher Education</fullName>
+                <default>false</default>
+                <label>Post  Graduate Diploma in Higher Education</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Adult Education &amp; Development</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Adult Education &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Audio Programme Production</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Audio Programme Production</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Educational Technology</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Educational Technology</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma In Environment And Sustainable Development</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma In Environment And Sustainable Development</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Gender Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Gender Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Library Automation and Networking</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Library Automation and Networking</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Social Work PGDSW</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Social Work PGDSW</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Translation</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Translation</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Functional English</fullName>
+                <default>false</default>
+                <label>Certificate Course in Functional English</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in German</fullName>
+                <default>false</default>
+                <label>Certificate Course in German</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Japanese</fullName>
+                <default>false</default>
+                <label>Certificate Course in Japanese</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Library and Information Science</fullName>
+                <default>false</default>
+                <label>Certificate Course in Library and Information Science</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Russian</fullName>
+                <default>false</default>
+                <label>Certificate Course in Russian</label>
+            </value>
+            <value>
+                <fullName>Certificate course in Spanish</fullName>
+                <default>false</default>
+                <label>Certificate course in Spanish</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Urdu</fullName>
+                <default>false</default>
+                <label>Certificate Course in Urdu</label>
+            </value>
+            <value>
+                <fullName>Certificate in English</fullName>
+                <default>false</default>
+                <label>Certificate in English</label>
+            </value>
+            <value>
+                <fullName>Certificate in Human Rights and Value Education</fullName>
+                <default>false</default>
+                <label>Certificate in Human Rights and Value Education</label>
+            </value>
+            <value>
+                <fullName>Certificate in Rural Development CRD</fullName>
+                <default>false</default>
+                <label>Certificate in Rural Development CRD</label>
+            </value>
+            <value>
+                <fullName>Certificate in Social Work and Criminal Justice System CSWCJS</fullName>
+                <default>false</default>
+                <label>Certificate in Social Work and Criminal Justice System CSWCJS</label>
+            </value>
+            <value>
+                <fullName>Certificate in Visual Arts - Applied Arts CVAA</fullName>
+                <default>false</default>
+                <label>Certificate in Visual Arts - Applied Arts CVAA</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Business Administration BBA Retail Management</fullName>
+                <default>false</default>
+                <label>Bachelor of Business Administration BBA Retail Management</label>
+            </value>
+            <value>
+                <fullName>Master of Business Administration MBA Banking</fullName>
+                <default>false</default>
+                <label>Master of Business Administration MBA Banking</label>
+            </value>
+            <value>
+                <fullName>Master of Business Administration MBA Human Resource Management</fullName>
+                <default>false</default>
+                <label>Master of Business Administration MBA Human Resource Management</label>
+            </value>
+            <value>
+                <fullName>Diploma in Event Management</fullName>
+                <default>false</default>
+                <label>Diploma in Event Management</label>
+            </value>
+            <value>
+                <fullName>PG Diploma in Disaster Management</fullName>
+                <default>false</default>
+                <label>PG Diploma in Disaster Management</label>
+            </value>
+            <value>
+                <fullName>Post  Graduate Diploma in Operations Management</fullName>
+                <default>false</default>
+                <label>Post  Graduate Diploma in Operations Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in International Business</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in International Business</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Rural Development</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Rural Development</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Interdisciplinary courses</fullName>
+                <default>false</default>
+                <label>Ph.D. Interdisciplinary courses</label>
+            </value>
+            <value>
+                <fullName>Diploma in Modern Office Practice</fullName>
+                <default>false</default>
+                <label>Diploma in Modern Office Practice</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Nursing</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Nursing</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Nursing</fullName>
+                <default>false</default>
+                <label>Ph.D. Nursing</label>
+            </value>
+            <value>
+                <fullName>Diploma in Nursing Administration</fullName>
+                <default>false</default>
+                <label>Diploma in Nursing Administration</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Geriatric Medicine</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Geriatric Medicine</label>
+            </value>
+            <value>
+                <fullName>Certificate in Care Waste Management CHCWM</fullName>
+                <default>false</default>
+                <label>Certificate in Care Waste Management CHCWM</label>
+            </value>
+            <value>
+                <fullName>Certificate in HIV and Family Education</fullName>
+                <default>false</default>
+                <label>Certificate in HIV and Family Education</label>
+            </value>
+            <value>
+                <fullName>Certificate in Home Based Care Provider CHBCP</fullName>
+                <default>false</default>
+                <label>Certificate in Home Based Care Provider CHBCP</label>
+            </value>
+            <value>
+                <fullName>Certificate in Maternal and Child Health Care CMCHC</fullName>
+                <default>false</default>
+                <label>Certificate in Maternal and Child Health Care CMCHC</label>
+            </value>
+            <value>
+                <fullName>Certificate in Newborn and Infant Care CNIC</fullName>
+                <default>false</default>
+                <label>Certificate in Newborn and Infant Care CNIC</label>
+            </value>
+            <value>
+                <fullName>Certified Course in Food and Nutrition</fullName>
+                <default>false</default>
+                <label>Certified Course in Food and Nutrition</label>
+            </value>
+            <value>
+                <fullName>Master of Commerce M.Com Business Policy and Corporate Governance</fullName>
+                <default>false</default>
+                <label>Master of Commerce M.Com Business Policy and Corporate Governance</label>
+            </value>
+            <value>
+                <fullName>Master of Commerce M.Com Management Accounting &amp; Financial Strategies</fullName>
+                <default>false</default>
+                <label>Master of Commerce M.Com Management Accounting &amp; Financial Strategies</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Statistics</fullName>
+                <default>false</default>
+                <label>Ph.D. Statistics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Geography</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Geography</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Chemistry</fullName>
+                <default>false</default>
+                <label>M.Phil. Chemistry</label>
+            </value>
+            <value>
+                <fullName>Master of Science M.Sc Counseling and Family Therapy</fullName>
+                <default>false</default>
+                <label>Master of Science M.Sc Counseling and Family Therapy</label>
+            </value>
+            <value>
+                <fullName>Master of Science M.Sc Food Nutrition</fullName>
+                <default>false</default>
+                <label>Master of Science M.Sc Food Nutrition</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Anthropology</fullName>
+                <default>false</default>
+                <label>Ph.D. Anthropology</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Biochemistry</fullName>
+                <default>false</default>
+                <label>Ph.D. Biochemistry</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Environmental Science</fullName>
+                <default>false</default>
+                <label>Ph.D. Environmental Science</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Food and Nutrition</fullName>
+                <default>false</default>
+                <label>Ph.D. Food and Nutrition</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Geology</fullName>
+                <default>false</default>
+                <label>Ph.D. Geology</label>
+            </value>
+            <value>
+                <fullName>Diploma in Aquaculture</fullName>
+                <default>false</default>
+                <label>Diploma in Aquaculture</label>
+            </value>
+            <value>
+                <fullName>Certificate in Environmental Studies CES</fullName>
+                <default>false</default>
+                <label>Certificate in Environmental Studies CES</label>
+            </value>
+            <value>
+                <fullName>Diploma in Paralegal Practice DIPP</fullName>
+                <default>false</default>
+                <label>Diploma in Paralegal Practice DIPP</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Disaster Management and Law</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Disaster Management and Law</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma Intellectual Property Rights Law PGDIPRL</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma Intellectual Property Rights Law PGDIPRL</label>
+            </value>
+            <value>
+                <fullName>Certificate in Anti Human Trafficking CAHT</fullName>
+                <default>false</default>
+                <label>Certificate in Anti Human Trafficking CAHT</label>
+            </value>
+            <value>
+                <fullName>Certificate in International Humanitarian Law CIHL</fullName>
+                <default>false</default>
+                <label>Certificate in International Humanitarian Law CIHL</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Cyber Law PGCCL</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Cyber Law PGCCL</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Patent Practice PGCPP</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Patent Practice PGCPP</label>
+            </value>
+            <value>
+                <fullName>Certificate in Performing Arts - Bharatnatyam CPABN</fullName>
+                <default>false</default>
+                <label>Certificate in Performing Arts - Bharatnatyam CPABN</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Agriculture</fullName>
+                <default>false</default>
+                <label>Ph.D. Agriculture</label>
+            </value>
+            <value>
+                <fullName>Diploma in Dairy Technology</fullName>
+                <default>false</default>
+                <label>Diploma in Dairy Technology</label>
+            </value>
+            <value>
+                <fullName>Diploma in Fish Products Technology DFPT</fullName>
+                <default>false</default>
+                <label>Diploma in Fish Products Technology DFPT</label>
+            </value>
+            <value>
+                <fullName>Diploma in Meat Technology DMT</fullName>
+                <default>false</default>
+                <label>Diploma in Meat Technology DMT</label>
+            </value>
+            <value>
+                <fullName>Diploma In Production Of Value Added Products From Cereals</fullName>
+                <default>false</default>
+                <label>Diploma In Production Of Value Added Products From Cereals</label>
+            </value>
+            <value>
+                <fullName>Diploma in Value Added Products from Fruits and Vegetables DVAPFV</fullName>
+                <default>false</default>
+                <label>Diploma in Value Added Products from Fruits and Vegetables DVAPFV</label>
+            </value>
+            <value>
+                <fullName>Diploma in Watershed Management</fullName>
+                <default>false</default>
+                <label>Diploma in Watershed Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma In Plantation Management PGDPM</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma In Plantation Management PGDPM</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Food and Beverage Operations</fullName>
+                <default>false</default>
+                <label>Certificate Course in Food and Beverage Operations</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Organic Farming COF</fullName>
+                <default>false</default>
+                <label>Certificate Course in Organic Farming COF</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Sericulture CIS</fullName>
+                <default>false</default>
+                <label>Certificate Course in Sericulture CIS</label>
+            </value>
+            <value>
+                <fullName>Certificate in Bee Keeping CIB</fullName>
+                <default>false</default>
+                <label>Certificate in Bee Keeping CIB</label>
+            </value>
+            <value>
+                <fullName>Certificate in Water Harvesting and Management CWHM</fullName>
+                <default>false</default>
+                <label>Certificate in Water Harvesting and Management CWHM</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Agriculture Policy PGCAP</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Agriculture Policy PGCAP</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Journalism and Mass Communication</fullName>
+                <default>false</default>
+                <label>M.Phil. Journalism and Mass Communication</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Journalism and Mass Communication</fullName>
+                <default>false</default>
+                <label>Ph.D. Journalism and Mass Communication</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Criminal Justice PGDCJ</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Criminal Justice PGDCJ</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Tourism</fullName>
+                <default>false</default>
+                <label>Certificate Course in Tourism</label>
+            </value>
+            <value>
+                <fullName>Certificate of Competency in Power Distribution CCPD</fullName>
+                <default>false</default>
+                <label>Certificate of Competency in Power Distribution CCPD</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Women Studies</fullName>
+                <default>false</default>
+                <label>Ph.D. Women Studies</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Public Administration</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Public Administration</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Persian</fullName>
+                <default>false</default>
+                <label>Certificate Course in Persian</label>
+            </value>
+            <value>
+                <fullName>Certificate course in Arabic</fullName>
+                <default>false</default>
+                <label>Certificate course in Arabic</label>
+            </value>
+            <value>
+                <fullName>Bachelor&apos;s Preparatory Programme BPP</fullName>
+                <default>false</default>
+                <label>Bachelor&apos;s Preparatory Programme BPP</label>
+            </value>
+            <value>
+                <fullName>Certificate in Fashion Designing</fullName>
+                <default>false</default>
+                <label>Certificate in Fashion Designing</label>
+            </value>
+            <value>
+                <fullName>Master of Science M.Sc Mathematics with Computer Science</fullName>
+                <default>false</default>
+                <label>Master of Science M.Sc Mathematics with Computer Science</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Theatre Arts</fullName>
+                <default>false</default>
+                <label>M.Phil. Theatre Arts</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Gandhian and Peace Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Gandhian and Peace Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Extension and Development Administration</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Extension and Development Administration</label>
+            </value>
+            <value>
+                <fullName>Diploma in Panchayat Level Administration &amp; Development</fullName>
+                <default>false</default>
+                <label>Diploma in Panchayat Level Administration &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Diploma in WomenÃ¢â‚¬â„¢s Empowerment and Development</fullName>
+                <default>false</default>
+                <label>Diploma in WomenÃ¢â‚¬â„¢s Empowerment and Development</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Human Rights</fullName>
+                <default>false</default>
+                <label>Certificate Course in Human Rights</label>
+            </value>
+            <value>
+                <fullName>Certificate in Energy Technology and Management</fullName>
+                <default>false</default>
+                <label>Certificate in Energy Technology and Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Urban Planning and Development</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Urban Planning and Development</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Analytical Chemistry</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Analytical Chemistry</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Adult Education</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Adult Education</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Bangla-Hindi Translation</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Bangla-Hindi Translation</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Extension and Development Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Extension and Development Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Gandhi and Peace Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Gandhi and Peace Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Malayalam-Hindi Translation</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Malayalam-Hindi Translation</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Information and Assistive Technology</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Information and Assistive Technology</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Korean Language</fullName>
+                <default>false</default>
+                <label>Certificate Course in Korean Language</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Life Science</fullName>
+                <default>false</default>
+                <label>Ph.D. Life Science</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Mental Health Care</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Mental Health Care</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Geriatric Nursing</fullName>
+                <default>false</default>
+                <label>Certificate Course in Geriatric Nursing</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Folklore</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Folklore</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Family and Health Counselling</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Family and Health Counselling</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Travel, Tourism and Hospitality Management</fullName>
+                <default>false</default>
+                <label>Ph.D. Travel, Tourism and Hospitality Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate Course in Womenâ€™s Studies PGCCWS</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate Course in Womenâ€™s Studies PGCCWS</label>
+            </value>
+            <value>
+                <fullName>Diploma in Critical Care Nursing</fullName>
+                <default>false</default>
+                <label>Diploma in Critical Care Nursing</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Extension and Development Studies</fullName>
+                <default>false</default>
+                <label>Ph.D. Extension and Development Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Educational Planning and Administration</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Educational Planning and Administration</label>
+            </value>
+            <value>
+                <fullName>Diploma in Early Childhood Care and Education</fullName>
+                <default>false</default>
+                <label>Diploma in Early Childhood Care and Education</label>
+            </value>
+            <value>
+                <fullName>Certificate in Home Health Aid</fullName>
+                <default>false</default>
+                <label>Certificate in Home Health Aid</label>
+            </value>
+            <value>
+                <fullName>Certificate in General Duty Assistant</fullName>
+                <default>false</default>
+                <label>Certificate in General Duty Assistant</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Hospitality Management</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Hospitality Management</label>
+            </value>
+            <value>
+                <fullName>Certificate in Front Office Management</fullName>
+                <default>false</default>
+                <label>Certificate in Front Office Management</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Tribal Language</fullName>
+                <default>false</default>
+                <label>Certificate Course in Tribal Language</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in First Aid and Safety Education</fullName>
+                <default>false</default>
+                <label>Certificate Course in First Aid and Safety Education</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Phlebotomy Technician</fullName>
+                <default>false</default>
+                <label>Certificate Course in Phlebotomy Technician</label>
+            </value>
+            <value>
+                <fullName>Certificate in Goods and Services Tax</fullName>
+                <default>false</default>
+                <label>Certificate in Goods and Services Tax</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Geoinformatics</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Geoinformatics</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Climate Change</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Climate Change</label>
+            </value>
+            <value>
+                <fullName>Certificate in Visual Arts - Painting CVAP</fullName>
+                <default>false</default>
+                <label>Certificate in Visual Arts - Painting CVAP</label>
+            </value>
+            <value>
+                <fullName>Certificate in Performing Arts - Theatre Arts</fullName>
+                <default>false</default>
+                <label>Certificate in Performing Arts - Theatre Arts</label>
+            </value>
+            <value>
+                <fullName>Certificate in Performing Arts - Hindustani Music</fullName>
+                <default>false</default>
+                <label>Certificate in Performing Arts - Hindustani Music</label>
+            </value>
+            <value>
+                <fullName>Certificate in Performing Arts - Karnatak Music</fullName>
+                <default>false</default>
+                <label>Certificate in Performing Arts - Karnatak Music</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Population and Sustainable Development</fullName>
+                <default>false</default>
+                <label>Certificate Course in Population and Sustainable Development</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Value Added Products from Fruits and Vegetables</fullName>
+                <default>false</default>
+                <label>Certificate Course in Value Added Products from Fruits and Vegetables</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Dairy Farming</fullName>
+                <default>false</default>
+                <label>Certificate Course in Dairy Farming</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Pre- Primary Education</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Pre- Primary Education</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Sustainability Science</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Sustainability Science</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Development Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Development Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Environmental and Occupational Health</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Environmental and Occupational Health</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Applied Statistics</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Applied Statistics</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Medical Management of CBRNE Disasters</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Medical Management of CBRNE Disasters</label>
+            </value>
+            <value>
+                <fullName>Certificate In Communication and IT Skills</fullName>
+                <default>false</default>
+                <label>Certificate In Communication and IT Skills</label>
+            </value>
+            <value>
+                <fullName>Certificate In Co-Operation, Co-Operative Law</fullName>
+                <default>false</default>
+                <label>Certificate In Co-Operation, Co-Operative Law</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Vocational Education</fullName>
+                <default>false</default>
+                <label>Ph.D. Vocational Education</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Distance Education</fullName>
+                <default>false</default>
+                <label>Ph.D. Distance Education</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Distance Education</fullName>
+                <default>false</default>
+                <label>M.Phil. Distance Education</label>
+            </value>
+            <value>
+                <fullName>Certificate in Peace Studies and Conflict Management</fullName>
+                <default>false</default>
+                <label>Certificate in Peace Studies and Conflict Management</label>
+            </value>
+            <value>
+                <fullName>Certificate in Teaching of English as a Second Language</fullName>
+                <default>false</default>
+                <label>Certificate in Teaching of English as a Second Language</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Commerce B.Com</fullName>
+                <default>false</default>
+                <label>Bachelor of Commerce B.Com</label>
+            </value>
+            <value>
+                <fullName>Master of Business Administration MBA</fullName>
+                <default>false</default>
+                <label>Master of Business Administration MBA</label>
+            </value>
+            <value>
+                <fullName>Master of Computer Applications M.C.A</fullName>
+                <default>false</default>
+                <label>Master of Computer Applications M.C.A</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Economics</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Economics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA History</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA History</label>
+            </value>
+            <value>
+                <fullName>Master of Commerce M.Com</fullName>
+                <default>false</default>
+                <label>Master of Commerce M.Com</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA English</fullName>
+                <default>false</default>
+                <label>Master of Arts MA English</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Political Science</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Political Science</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA English</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA English</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Economics</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Economics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Business Administration BBA</fullName>
+                <default>false</default>
+                <label>Bachelor of Business Administration BBA</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Computer Applications BCA</fullName>
+                <default>false</default>
+                <label>Bachelor of Computer Applications BCA</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA History</fullName>
+                <default>false</default>
+                <label>Master of Arts MA History</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Sociology</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Sociology</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Political Science</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Political Science</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Hindi</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Hindi</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Sociology</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Sociology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hindi</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hindi</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Education</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Education</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Mathematics</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Mathematics</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Chemistry</fullName>
+                <default>false</default>
+                <label>Ph.D. Chemistry</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Library and Information Science B.Lib.I.Sc</fullName>
+                <default>false</default>
+                <label>Bachelor of Library and Information Science B.Lib.I.Sc</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Sanskrit</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Sanskrit</label>
+            </value>
+            <value>
+                <fullName>Master in Social Work MSW</fullName>
+                <default>false</default>
+                <label>Master in Social Work MSW</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Public Administration</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Public Administration</label>
+            </value>
+            <value>
+                <fullName>Master of Library and Information Science M.Lib.I.Sc</fullName>
+                <default>false</default>
+                <label>Master of Library and Information Science M.Lib.I.Sc</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Botany</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Botany</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Chemistry</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Chemistry</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Physics</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Physics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Zoology</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Zoology</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in French</fullName>
+                <default>false</default>
+                <label>Certificate Course in French</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Computer Applications PGDCA</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Computer Applications PGDCA</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Mathematics</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Mathematics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Psychology</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Psychology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Sanskrit</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Sanskrit</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Urdu</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Urdu</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Hons. Economics</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Hons. Economics</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Education B.Ed</fullName>
+                <default>false</default>
+                <label>Bachelor of Education B.Ed</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Social Work BSW</fullName>
+                <default>false</default>
+                <label>Bachelor of Social Work BSW</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Marketing Management PGDMM</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Marketing Management PGDMM</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Information Technology</fullName>
+                <default>false</default>
+                <label>Certificate Course in Information Technology</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Yoga</fullName>
+                <default>false</default>
+                <label>Certificate Course in Yoga</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Journalism and Mass Communication</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Journalism and Mass Communication</label>
+            </value>
+            <value>
+                <fullName>Certificate in NGO Management</fullName>
+                <default>false</default>
+                <label>Certificate in NGO Management</label>
+            </value>
+            <value>
+                <fullName>Certified Course in Teaching of English</fullName>
+                <default>false</default>
+                <label>Certified Course in Teaching of English</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Sociology</fullName>
+                <default>false</default>
+                <label>Ph.D. Sociology</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Physics</fullName>
+                <default>false</default>
+                <label>Ph.D. Physics</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Mathematics</fullName>
+                <default>false</default>
+                <label>Ph.D. Mathematics</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Management</fullName>
+                <default>false</default>
+                <label>Ph.D. Management</label>
+            </value>
+            <value>
+                <fullName>Ph.D. English</fullName>
+                <default>false</default>
+                <label>Ph.D. English</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Computer Science</fullName>
+                <default>false</default>
+                <label>Ph.D. Computer Science</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Commerce</fullName>
+                <default>false</default>
+                <label>Ph.D. Commerce</label>
+            </value>
+            <value>
+                <fullName>Master of Tourism and Travel Management MTTM</fullName>
+                <default>false</default>
+                <label>Master of Tourism and Travel Management MTTM</label>
+            </value>
+            <value>
+                <fullName>Master of Science M.Sc Environmental Science</fullName>
+                <default>false</default>
+                <label>Master of Science M.Sc Environmental Science</label>
+            </value>
+            <value>
+                <fullName>Diploma in Nutrition and Health Education</fullName>
+                <default>false</default>
+                <label>Diploma in Nutrition and Health Education</label>
+            </value>
+            <value>
+                <fullName>Master of Commerce M.Com Finance</fullName>
+                <default>false</default>
+                <label>Master of Commerce M.Com Finance</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Anthropology</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Anthropology</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Mass Communication &amp; Journalism</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Mass Communication &amp; Journalism</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Philosophy</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Philosophy</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Psychology</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Psychology</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Public Administration</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Public Administration</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Translation Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Translation Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Business Administration MBA Banking and Finance</fullName>
+                <default>false</default>
+                <label>Master of Business Administration MBA Banking and Finance</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Economics</fullName>
+                <default>false</default>
+                <label>M.Phil. Economics</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Economics</fullName>
+                <default>false</default>
+                <label>Ph.D. Economics</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Commerce</fullName>
+                <default>false</default>
+                <label>M.Phil. Commerce</label>
+            </value>
+            <value>
+                <fullName>Certificate in Disaster Management</fullName>
+                <default>false</default>
+                <label>Certificate in Disaster Management</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Education</fullName>
+                <default>false</default>
+                <label>Ph.D. Education</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Hindi</fullName>
+                <default>false</default>
+                <label>Ph.D. Hindi</label>
+            </value>
+            <value>
+                <fullName>Ph.D. History</fullName>
+                <default>false</default>
+                <label>Ph.D. History</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Political Science</fullName>
+                <default>false</default>
+                <label>Ph.D. Political Science</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Political Science</fullName>
+                <default>false</default>
+                <label>M.Phil. Political Science</label>
+            </value>
+            <value>
+                <fullName>M.Phil. Sociology</fullName>
+                <default>false</default>
+                <label>M.Phil. Sociology</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Rural Development</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Rural Development</label>
+            </value>
+            <value>
+                <fullName>Certificate in Tourism Studies</fullName>
+                <default>false</default>
+                <label>Certificate in Tourism Studies</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Psychology</fullName>
+                <default>false</default>
+                <label>Ph.D. Psychology</label>
+            </value>
+            <value>
+                <fullName>Advanced Certificate in Information Security</fullName>
+                <default>false</default>
+                <label>Advanced Certificate in Information Security</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Hons. Biochemistry</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Hons. Biochemistry</label>
+            </value>
+            <value>
+                <fullName>Certificate Course in Mobile Application</fullName>
+                <default>false</default>
+                <label>Certificate Course in Mobile Application</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Animal Welfare</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Animal Welfare</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Law</fullName>
+                <default>false</default>
+                <label>Ph.D. Law</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Folklore and Culture Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Folklore and Culture Studies</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Anthropology</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Anthropology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts BA Tourism Studies</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts BA Tourism Studies</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Hons. Anthropology</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Hons. Anthropology</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Distance Education</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Distance Education</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Adult Education</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Adult Education</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Development Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Development Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Women and Gender Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Women and Gender Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Gender and Development Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Gender and Development Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Gandhi and Peace Studies</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Gandhi and Peace Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Social Work MSW Counselling</fullName>
+                <default>false</default>
+                <label>Master of Social Work MSW Counselling</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in School Leadership and Management</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in School Leadership and Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Educational Management and Administration</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Educational Management and Administration</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Corporate Social Responsibility</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Corporate Social Responsibility</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Food Safety and Quality Management</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Food Safety and Quality Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Information Security</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Information Security</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Pharmaceutical Sales Management</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Pharmaceutical Sales Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Women&apos;s &amp; Gender Studies</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Women&apos;s &amp; Gender Studies</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Book Publishing</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Book Publishing</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Hospital and Health Management</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Hospital and Health Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in Maternal and Child Health</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in Maternal and Child Health</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Diploma in HIV Medicine</fullName>
+                <default>false</default>
+                <label>Post Graduate Diploma in HIV Medicine</label>
+            </value>
+            <value>
+                <fullName>Diploma in Horticulture</fullName>
+                <default>false</default>
+                <label>Diploma in Horticulture</label>
+            </value>
+            <value>
+                <fullName>Diploma in Business Process Outsourcing Finance and Accounting</fullName>
+                <default>false</default>
+                <label>Diploma in Business Process Outsourcing Finance and Accounting</label>
+            </value>
+            <value>
+                <fullName>Diploma in Retailing</fullName>
+                <default>false</default>
+                <label>Diploma in Retailing</label>
+            </value>
+            <value>
+                <fullName>Diploma in Teaching German</fullName>
+                <default>false</default>
+                <label>Diploma in Teaching German</label>
+            </value>
+            <value>
+                <fullName>Diploma in Theatre Art</fullName>
+                <default>false</default>
+                <label>Diploma in Theatre Art</label>
+            </value>
+            <value>
+                <fullName>Diploma in Value Education</fullName>
+                <default>false</default>
+                <label>Diploma in Value Education</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science B.Sc Geology</fullName>
+                <default>false</default>
+                <label>Bachelor of Science B.Sc Geology</label>
+            </value>
+            <value>
+                <fullName>Advanced Certificate in Power Distribution Management</fullName>
+                <default>false</default>
+                <label>Advanced Certificate in Power Distribution Management</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Inventory Planning and Warehousing</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Inventory Planning and Warehousing</label>
+            </value>
+            <value>
+                <fullName>Post Graduate Certificate in Industrial Safety</fullName>
+                <default>false</default>
+                <label>Post Graduate Certificate in Industrial Safety</label>
+            </value>
+            <value>
+                <fullName>Certificate in Life and Thought</fullName>
+                <default>false</default>
+                <label>Certificate in Life and Thought</label>
+            </value>
+            <value>
+                <fullName>Certificate in Nutrition and Child Care</fullName>
+                <default>false</default>
+                <label>Certificate in Nutrition and Child Care</label>
+            </value>
+            <value>
+                <fullName>Certificate in Guidance</fullName>
+                <default>false</default>
+                <label>Certificate in Guidance</label>
+            </value>
+            <value>
+                <fullName>Certificate in Consumer Protection</fullName>
+                <default>false</default>
+                <label>Certificate in Consumer Protection</label>
+            </value>
+            <value>
+                <fullName>Certificate in Business Skills</fullName>
+                <default>false</default>
+                <label>Certificate in Business Skills</label>
+            </value>
+            <value>
+                <fullName>Certificate in Laboratory Techniques</fullName>
+                <default>false</default>
+                <label>Certificate in Laboratory Techniques</label>
+            </value>
+            <value>
+                <fullName>Certificate in Teaching of Primary School Mathematic</fullName>
+                <default>false</default>
+                <label>Certificate in Teaching of Primary School Mathematic</label>
+            </value>
+            <value>
+                <fullName>Certificate in Poultry Farming</fullName>
+                <default>false</default>
+                <label>Certificate in Poultry Farming</label>
+            </value>
+            <value>
+                <fullName>Certificate in Health Care Waste Management</fullName>
+                <default>false</default>
+                <label>Certificate in Health Care Waste Management</label>
+            </value>
+            <value>
+                <fullName>Certificate in Geriatric Care Assistance</fullName>
+                <default>false</default>
+                <label>Certificate in Geriatric Care Assistance</label>
+            </value>
+            <value>
+                <fullName>Certificate in Value Education</fullName>
+                <default>false</default>
+                <label>Certificate in Value Education</label>
+            </value>
+            <value>
+                <fullName>Certificate in Community Radio</fullName>
+                <default>false</default>
+                <label>Certificate in Community Radio</label>
+            </value>
+            <value>
+                <fullName>Certificate in Solid Waste Management</fullName>
+                <default>false</default>
+                <label>Certificate in Solid Waste Management</label>
+            </value>
+            <value>
+                <fullName>Certificate in Adolescent Health and Counseling</fullName>
+                <default>false</default>
+                <label>Certificate in Adolescent Health and Counseling</label>
+            </value>
+            <value>
+                <fullName>Certificate in Gender, Agriculture and Sustainable Development</fullName>
+                <default>false</default>
+                <label>Certificate in Gender, Agriculture and Sustainable Development</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Dairy Science and Technology</fullName>
+                <default>false</default>
+                <label>Ph.D. Dairy Science and Technology</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Development Studies</fullName>
+                <default>false</default>
+                <label>Ph.D. Development Studies</label>
+            </value>
+            <value>
+                <fullName>Master of Arts MA Jyotish</fullName>
+                <default>false</default>
+                <label>Master of Arts MA Jyotish</label>
+            </value>
+            <value>
+                <fullName>Master of Business Administration MBA Integrated Course</fullName>
+                <default>false</default>
+                <label>Master of Business Administration MBA Integrated Course</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Chemical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Chemical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Civil Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Civil Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Aeronautical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Aeronautical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Applied Electronics &amp; Instrumentation</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Applied Electronics &amp; Instrumentation</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Automobile Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Automobile Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Biomedical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Biomedical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Biotechnology</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Biotechnology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Computer Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Computer Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Computer Science and Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Computer Science and Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Electrical and Electronics Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Electrical and Electronics Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Electrical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Electrical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Electronics &amp; Communication Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Electronics &amp; Communication Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Electronics and Instrumentation Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Electronics and Instrumentation Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Electronics Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Electronics Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Environmental Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Environmental Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Industrial &amp; Production Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Industrial &amp; Production Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Industrial Engineering &amp; Management</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Industrial Engineering &amp; Management</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Mechanical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Mechanical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Mining Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Mining Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Petrochemical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Petrochemical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Engineering BE Textile Technology</fullName>
+                <default>false</default>
+                <label>Bachelor of Engineering BE Textile Technology</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Technology B.Tech + Master of Technology M.Tech Civil Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Technology B.Tech + Master of Technology M.Tech Civil Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Technology B.Tech + Master of Technology M.Tech Computer Science &amp; Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Technology B.Tech + Master of Technology M.Tech Computer Science &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Technology B.Tech + Master of Technology M.Tech Electrical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Technology B.Tech + Master of Technology M.Tech Electrical Engineering</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Technology B.Tech + Master of Technology M.Tech Mechanical Engineering</fullName>
+                <default>false</default>
+                <label>Bachelor of Technology B.Tech + Master of Technology M.Tech Mechanical Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Advanced Production System</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Advanced Production System</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Automobile Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Automobile Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME CAD/CAM</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME CAD/CAM</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Chemical Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Chemical Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Communication Systems</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Communication Systems</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Computer Aided Design of Structures</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Computer Aided Design of Structures</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Computer Science and Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Computer Science and Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Computer Technology &amp; Applications</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Computer Technology &amp; Applications</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Construction Engineering and Management</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Construction Engineering and Management</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Digital Communication &amp; Networking</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Digital Communication &amp; Networking</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Digital Electronics</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Digital Electronics</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Electronics &amp; Communication</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Electronics &amp; Communication</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Embedded System and VLSI Design</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Embedded System and VLSI Design</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Embedded Systems</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Embedded Systems</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Environment Management</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Environment Management</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Environmental Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Environmental Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Heat Power</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Heat Power</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME High Voltage Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME High Voltage Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Industrial Engineering &amp; Management</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Industrial Engineering &amp; Management</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Information Technology</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Information Technology</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Machine Design</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Machine Design</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Mechanical Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Mechanical Engineering</label>
+            </value>
+            <value>
+                <fullName>Master of Engineering ME Microwave &amp; Radar Engineering</fullName>
+                <default>false</default>
+                <label>Master of Engineering ME Microwave &amp; Radar Engineering</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

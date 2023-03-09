@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interview_Status_AO__c</fullName>
+    <externalId>false</externalId>
+    <label>Interview Status (AO)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Conducted</fullName>
+                <default>false</default>
+                <label>Conducted</label>
+            </value>
+            <value>
+                <fullName>Rescheduled</fullName>
+                <default>false</default>
+                <label>Rescheduled</label>
+            </value>
+            <value>
+                <fullName>No Conducted</fullName>
+                <default>false</default>
+                <label>Not Conducted</label>
+            </value>
+            <value>
+                <fullName>AO No Show</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AO No Show</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Partial Conducted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partial Conducted</label>
+            </value>
+            <value>
+                <fullName>Refer notes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Refer notes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

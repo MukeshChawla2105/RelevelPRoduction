@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" controller="LeadReassignmentHelper">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="QueueInfo" type="Group" />
+        <aura:attribute name="selectedValue" type="String" default=""/>
+
+    <lightning:card footer="" title="">
+        
+        <lightning:select name="select" label="Reassign Lead to : " value="choose one..." required="true" aura:id="select" onchange="{!c.onChange}">
+            <option value="">choose one...</option>
+            <option value="{!v.QueueInfo.Id}">{!v.QueueInfo.Name}</option>
+        </lightning:select>
+        <br/><br/>
+        
+        <div >
+            <lightning:button variant="brand" label="Update" class="slds-align_absolute-center" title="Update" onclick="{!c.updateLeadOwner}"/>
+        </div>
+        
+    </lightning:card>
+</aura:component>

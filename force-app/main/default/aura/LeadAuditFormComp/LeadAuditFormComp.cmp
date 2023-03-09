@@ -1,0 +1,584 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" Controller="LeadAuditForm">
+
+
+    <!-- #####################################################   Attribues   ################################## -->
+    <aura:attribute name="recordId" type="string" default="00Q5j000008ohKNEAY" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:attribute name="options" type="string" default="" />
+    <aura:attribute name="allMapValues" type="Object" /> 
+    <aura:attribute name="ObjectMapCustomPicklist" type="Object" />
+    <aura:attribute name="disableEdit" type="boolean" default="false" />
+    <aura:attribute name="showInvalidReason" type="boolean" default="false" />
+    <aura:attribute name="showCouldNotDeterminedReason" type="boolean" default="false" />
+    <aura:attribute name="invalidReasonOthers" type="boolean" default="false" />
+    <aura:attribute name="QualityScore" type="Quality_Score__c" />
+    <aura:attribute name="hideButtonOnSave" type="boolean" default="false" />
+    <!-- ########################################################################### -->
+
+    <div class="slds-box slds-box_xx-small slds-m-around_medium slds-p-around_xx-large">
+
+        <div class="slds-grid slds-gutters" style="background-color:powderblue;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col">
+                <span>
+                    <h2 style="">
+                    Opening
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span></span>
+            </div>
+            <div class="slds-col">
+                <span>Scored - {!v.QualityScore.Opening__c} / {!v.QualityScore.Opening_Marks_Out_Of__c}</span>
+            </div>
+        </div>
+
+        <!--h2 style="background-color:powderblue;padding:.5%;font-size:20px;">
+            Opening &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Total - 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Scored - {!v.QualityScore.Opening__c} / {!v.QualityScore.Opening_Marks_Out_Of__c}
+        </h2-->
+        
+        <!-- lightning:select name="select1" label="Greeting" disabled="{!v.disableEdit}" value="{!v.QualityScore.Greeting__c}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.value}" />
+            </aura:iteration>
+        </lightning:select -->
+
+
+        <lightning:select name="select1" label="Greeting" disabled="{!v.disableEdit}" value="{!v.QualityScore.Greeting__c}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.allMapValues.Greeting__c}" var="option">
+                <option text="{!option}" value="{!option}" />
+            </aura:iteration>
+        </lightning:select>
+
+        <lightning:select name="select1" label="Introduction" value="{!v.QualityScore.Introduction__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.allMapValues.Introduction__c}" var="option">
+                <option text="{!option}" value="{!option}" />
+            </aura:iteration>
+        </lightning:select>
+
+        <lightning:select name="select1" label="Company" value="{!v.QualityScore.Company__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.allMapValues.Company__c}" var="option">
+                <option text="{!option}" value="{!option}" />
+            </aura:iteration>
+
+        </lightning:select>
+        
+        <!-- lightning:select name="select1" label="Context Setting" value="{!v.QualityScore.Context_Setting_V1__c}" disabled="{!v.disableEdit}">
+            <aura:if isTrue="{!not(empty(v.QualityScore.Context_Setting_V1__c))}" >
+                <option value="">choose one...</option>
+                <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                    <option text="{!option.key}" value="{!option.key}" selected="{!option.key == v.QualityScore.Context_Setting_V1__c}"/>
+                </aura:iteration>
+            </aura:if>
+        </lightning:select --> 
+
+        <lightning:select name="select1" label="Context Setting" value="{!v.QualityScore.Context_Setting_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}"/>
+            </aura:iteration>
+            
+        </lightning:select>
+        <br/><br/>
+
+
+        <div class="slds-grid slds-gutters" style="background-color:powderblue;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col">
+                <span>
+                    <h2 style="">
+                    Probing
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span></span>
+            </div>
+            <div class="slds-col">
+                <span>Scored - {!v.QualityScore.Probing__c} / {!v.QualityScore.Probing_Marks_Out_Of__c}</span>
+            </div>
+        </div>
+        <!--h2 style="background-color:powderblue;padding:.5%;font-size:20px;"> Probing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Total - 23 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Scored - {!v.QualityScore.Probing__c} / {!v.QualityScore.Probing_Marks_Out_Of__c}
+        </h2-->
+
+        <lightning:select name="select1" label="Background" value="{!v.QualityScore.Background_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Intent" value="{!v.QualityScore.Intent_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Financial" value="{!v.QualityScore.Financial_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Environment" value="{!v.QualityScore.Environment_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Aspiration" value="{!v.QualityScore.Aspiration_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Domain Awareness" value="{!v.QualityScore.Domain_Awareness_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <br/><br/>
+
+        <div class="slds-grid slds-gutters" style="background-color:powderblue;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col">
+                <span>
+                    <h2 style="">
+                    Need Mapping
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span></span>
+            </div>
+            <div class="slds-col">
+                <span>Scored - {!v.QualityScore.Need_Mapping__c} / {!v.QualityScore.Need_Mapping_Marks_Out_Of__c}</span>
+            </div>
+        </div>
+        <!--h2 style="background-color:powderblue;padding:.5%;font-size:20px;">Need Mapping &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Total - 20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Scored - {!v.QualityScore.Need_Mapping__c} / {!v.QualityScore.Need_Mapping_Marks_Out_Of__c}
+        </h2-->
+
+        <lightning:select name="select1" label="Live Class - Schedule  and Duration of course" value="{!v.QualityScore.Live_Class_Schedule_and_Duration_of_c__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Doubt Support, TA" value="{!v.QualityScore.Doubt_Support_TA_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Placement Assistance and Career Support" value="{!v.QualityScore.Placement_Assistance_and_Career_Support__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Guest Lectures" value="{!v.QualityScore.Guest_Lectures_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <lightning:select name="select1" label="Proctored Test" value="{!v.QualityScore.Proctored_Test_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Community Access" value="{!v.QualityScore.Community_Access_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <lightning:select name="select1" label="Assignments and quizes" value="{!v.QualityScore.Assignments_and_quizes_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        
+        <lightning:select name="select1" label="Educators" value="{!v.QualityScore.Educators_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        
+        <lightning:select name="select1" label="Dedicated Success Manager" value="{!v.QualityScore.Dedicated_Success_Manager_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Salary band" value="{!v.QualityScore.Salary_band_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <!-- lightning:select name="select1" label="Class schedule/Duration of course" value="{!v.QualityScore.Class_Scheduled_Duration_of_Course__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select -->
+
+        <lightning:select name="select1" label="Certificates" value="{!v.QualityScore.Certificates_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Projects - Create product from scratch" value="{!v.QualityScore.Projects_Create_prod_from_scratch_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <br/><br/>
+
+        <div class="slds-grid slds-gutters" style="background-color:powderblue;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col">
+                <span>
+                    <h2 style="">
+                    Closure
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span></span>
+            </div>
+            <div class="slds-col">
+                <span>Scored - {!v.QualityScore.Closure__c} / {!v.QualityScore.Closure_Marks_Out_Of__c}</span>
+            </div>
+        </div>
+        <!--h2 style="background-color:powderblue;padding:.5%;font-size:20px;">Closure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Total - 27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Scored - {!v.QualityScore.Closure__c} / {!v.QualityScore.Closure_Marks_Out_Of__c}
+        </h2-->
+        <lightning:select name="select1" label="Reference Price" value="{!v.QualityScore.Reference_Price_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Opportunity Cost" value="{!v.QualityScore.Opportunity_Cost_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <lightning:select name="select1" label="Referrals" value="{!v.QualityScore.Referrals_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <lightning:select name="select1" label="Price Breakdown" value="{!v.QualityScore.Price_Breakdown_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Disposable income" value="{!v.QualityScore.Disposable_income_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Return on investment (ROI)" value="{!v.QualityScore.Return_on_investment_ROI_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Negotiation and Urgency" value="{!v.QualityScore.Negotiation_and_Urgency_V1__c	}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+
+        <lightning:select name="select1" label="Payment Options and process" value="{!v.QualityScore.Payment_Options_and_process_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <br/><br/>
+
+
+        <div class="slds-grid slds-gutters" style="background-color:powderblue;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col">
+                <span>
+                    <h2 style="">
+                    Subjective
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span></span>
+            </div>
+            <div class="slds-col">
+                <span>Scored - {!v.QualityScore.Subjective__c} / {!v.QualityScore.Subjective_Marks_Out_Of__c}</span>
+            </div>
+        </div>
+        <!--h2 style="background-color:powderblue;padding:.5%;font-size:20px;">Subjective &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Total - 20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Scored - {!v.QualityScore.Subjective__c} / {!v.QualityScore.Subjective_Marks_Out_Of__c}
+        </h2-->
+        <lightning:select name="select1" label="Storytelling/Dream Selling" value="{!v.QualityScore.Storytelling_Deam_selling_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <lightning:select name="select1" label="Empathy" value="{!v.QualityScore.Empathy_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Confidence/Authority/Energy/Voice Modulation" value="{!v.QualityScore.Confidence_Autho_Eng_Voice_Mod_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+
+        <lightning:select name="select1" label="Objection handling" value="{!v.QualityScore.Objection_handling_V1__c}" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.ObjectMapCustomPicklist}" var="option">
+                <option text="{!option.key}" value="{!option.key}" />
+            </aura:iteration>
+
+        </lightning:select>
+        
+        <lightning:select aura:id="saleValidity" label="Sale Validity" value="{!v.QualityScore.Sale_Validity__c}" onchange="{! c.saleVAlidityChanged }" disabled="{!v.disableEdit}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.allMapValues.Sale_Validity__c}" var="option">
+                <option text="{!option}" value="{!option}" />
+            </aura:iteration>
+
+        </lightning:select>
+        <aura:if isTrue="{!v.showInvalidReason}">
+            <lightning:select name="select1" aura:id="saleInvalidChanged" label="Reason for Invalid" value="{!v.QualityScore.Reason_for_Invalid__c}" onchange="{! c.saleInvalidChanged }" disabled="{!v.disableEdit}">
+                <option value="">choose one...</option>
+                <aura:iteration items="{!v.allMapValues.Reason_for_Invalid__c}" var="option">
+                    <option text="{!option}" value="{!option}" />
+                </aura:iteration>
+
+            </lightning:select>
+        </aura:if>
+        <aura:if isTrue="{!v.invalidReasonOthers}">
+            <br/>
+            <lightning:textarea name="input1" label="Reason For Invalid Sale" value="{!v.QualityScore.Invalid_Reason__c}" disabled="{!v.disableEdit}" />
+
+        </aura:if>
+        <aura:if isTrue="{!v.showCouldNotDeterminedReason}">
+            <br/>
+            <lightning:textarea name="input1" label="Could not be determined reason" value="{!v.QualityScore.Could_not_be_determined_reason__c}" disabled="{!v.disableEdit}" />
+
+        </aura:if>
+
+
+        <br/>
+        <lightning:textarea name="input1" label="Remarks" value="{!v.QualityScore.Remarks__c}" disabled="{!v.disableEdit}" />
+
+        <br/><br/>
+
+        <lightning:input type="checkbox" label="ZT - Financial fraud (Collecting card details / Financial fraud / Asking for money transfer / Proxy usage / Data breach (Card, UPI, Wallet details, ATM Pin, CVV number, OTP, requesting to download irrelevant apps)"
+            name="input2" checked="{!v.QualityScore.Financial_fraud__c}" value="{!v.QualityScore.Financial_fraud__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="ZT - Serious unprofessionalism (Profanity / misbehavior with learner or parents over call, mail or other communication mediums (possible offences include offensive comments, swear words or opinions that harm the sentiments of the learner or parent on religious, caste, creed, sexuality, financial status, or any other discriminatory practices)"
+            checked="{!v.QualityScore.Serious_unprofessionalism__c}" value="{!v.QualityScore.Serious_unprofessionalism__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="RA - Abrupt Call Disconnections (BDE disconnects before the call has concluded)" checked="{!v.QualityScore.Abrupt_Call_Disconnections__c}" value="{!v.QualityScore.Abrupt_Call_Disconnections__c}" disabled="{!v.disableEdit}"
+        />
+        <br/>
+        <lightning:input type="checkbox" label="RA - Sharing or asking personal number via phone or email	" checked="{!v.QualityScore.Asking_Personal_Info__c}" value="{!v.QualityScore.Asking_Personal_Info__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="RA - CRM Etiquette (Lead disposition not marked correctly on CRM)" checked="{!v.QualityScore.CRM_Etiquette__c}" value="{!v.QualityScore.CRM_Etiquette__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="ZT - Deliberate malpractice (Any unfair practices to meet KPI targets - talk time, # dials, # connects)" checked="{!v.QualityScore.Deliberate_malpractice__c}" value="{!v.QualityScore.Deliberate_malpractice__c}"
+            disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="RA - Follow up adherence and effectiveness (Did not create follow up / Follow up leads not called within 24 hours and no effective follow up)" checked="{!v.QualityScore.Follow_up_adherence_effectiveness__c}" value="{!v.QualityScore.Follow_up_adherence_effectiveness__c}"
+            disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="ZT - Hateful messages about Unacademy( Spiteful or malicious opinions about Unacademy, its employees or policies)" checked="{!v.QualityScore.Hateful_messages__c}" value="{!v.QualityScore.Hateful_messages__c}" disabled="{!v.disableEdit}"
+        />
+        <br/>
+        <lightning:input type="checkbox" label="RA - False / incorrect information (Wrong product pitched- Wrong / outdated info related to product and process in order to sell the product - False promises on product or features, e.g. learner will get special attentions, additional course upon subscribing)"
+            checked="{!v.QualityScore.Incorrect_Information__c}" value="{!v.QualityScore.Incorrect_Information__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="RA - No proper efforts to sell the product(Offers, sales hooks usage, effective convincing skills not found)" checked="{!v.QualityScore.No_proper_efforts__c}" value="{!v.QualityScore.No_proper_efforts__c}" disabled="{!v.disableEdit}"/>
+        <br/>
+        <lightning:input type="checkbox" label="ZT - Privacy Violation (Misusing learner or parent's phone numbers for any illegal activities (sharing to competitors, posting on social media, adding to spam lists, etc.)" checked="{!v.QualityScore.Privacy_Violation__c}"
+            value="{!v.QualityScore.Privacy_Violation__c}" disabled="{!v.disableEdit}" />
+        <br/>
+        <lightning:input type="checkbox" label="RA - Rudeness / Sarcasm (Any comments that are sarcastic, argumentative and / or belittles the learner or parent)" checked="{!v.QualityScore.Rudeness__c}" value="{!v.QualityScore.Rudeness__c}" disabled="{!v.disableEdit}"/>
+        <br/>
+
+        <lightning:input type="checkbox" label="RA - Updating any incorrect details on sales force. (professional and educational details)" checked="{!v.QualityScore.Updating_incorrect_details__c}" value="{!v.QualityScore.Rudeness__c}" disabled="{!v.disableEdit}"/>
+        <br/>
+
+        <lightning:input type="checkbox" label="RA- Incomplete calls on non-referral sale leads or required information not confimed on SF for referral sale leads" checked="{!v.QualityScore.Incomplete_calls__c}" value="{!v.QualityScore.Rudeness__c}" disabled="{!v.disableEdit}"/>
+
+        <br/>
+        <div class="slds-align_absolute-center">
+            <lightning:button variant="brand" label="Save Audit Form" title="Brand action" onclick="{! c.SaveQualityScore }" disabled="{!v.disableEdit}" />
+        </div>
+
+    </div>
+    <aura:if isTrue="{!v.disableEdit}">
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td style=" background-color:#f7af6f;">
+
+                </td>
+                <td style=" background-color:#f7af6f;font-size: 40px;">
+                    Quality Summary
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    BDE
+                </td>
+                <td style="">
+                    {!v.QualityScore.BDA__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    SM
+                </td>
+                <td>
+                    {!v.QualityScore.SM__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Lead Link -
+                </td>
+                <td>
+                    {!v.QualityScore.Lead_Link__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td style=" background-color:#79a352;">
+                    Total Pitch Score %
+                </td>
+                <td style=" background-color:#79a352;">
+                    <lightning:formattedNumber value="{!v.QualityScore.Quality_Score__c}" maximumFractionDigits="2" /> %
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Opening
+                </td>
+                <td>
+                    {!v.QualityScore.Opening__c} / {!v.QualityScore.Opening_Marks_Out_Of__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Probing
+                </td>
+                <td>
+                    {!v.QualityScore.Probing__c} / {!v.QualityScore.Probing_Marks_Out_Of__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Need Mapping
+                </td>
+                <td>
+                    {!v.QualityScore.Need_Mapping__c} / {!v.QualityScore.Need_Mapping_Marks_Out_Of__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Closure
+                </td>
+                <td>
+                    {!v.QualityScore.Closure__c} / {!v.QualityScore.Closure_Marks_Out_Of__c}
+                </td>
+            </tr>
+            <tr class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <td>
+                    Subjective
+                </td>
+                <td>
+                    {!v.QualityScore.Subjective__c} / {!v.QualityScore.Subjective_Marks_Out_Of__c}
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <!-- lightning:textarea name="input1" label="Remarks" value="{!v.QualityScore.Remarks__c}" disabled="{!v.disableEdit}" / -->
+        <br/>
+    </aura:if>
+</aura:component>

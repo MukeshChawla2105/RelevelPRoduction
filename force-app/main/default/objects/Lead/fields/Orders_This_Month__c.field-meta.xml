@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orders_This_Month__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( and(  MONTH( Payment_Date__c )=6,Payment_details__c &gt;0,
+ OR(User_Category__c=&apos;Tech&apos;,User_Category__c=&apos;Business&apos;)),
+(Payment_details__c  + 1) -  Payment_details__c ,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Orders This Month</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

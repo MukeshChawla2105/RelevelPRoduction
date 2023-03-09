@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Todays_CheckIn</fullName>
+    <columns>NAME</columns>
+    <columns>Member__c</columns>
+    <columns>Checkin_Detatime__c</columns>
+    <columns>Checkout_Datetime__c</columns>
+    <columns>Duration__c</columns>
+    <columns>Profile__c</columns>
+    <columns>Created_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Todays CheckIn</label>
+</ListView>

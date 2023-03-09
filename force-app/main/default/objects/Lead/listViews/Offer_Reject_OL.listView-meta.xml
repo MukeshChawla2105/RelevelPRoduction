@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Reject_OL</fullName>
+    <columns>Lead_Link__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>SM__c</columns>
+    <columns>SSM__c</columns>
+    <columns>Interview_Date__c</columns>
+    <columns>Interview_slot__c</columns>
+    <columns>Interview_Date_Time_AC__c</columns>
+    <columns>Lead_Audited__c</columns>
+    <columns>Admission_roll_out_Final__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Interview_Status_AO__c</field>
+        <operation>equals</operation>
+        <value>Conducted</value>
+    </filters>
+    <filters>
+        <field>Admission_Letter_Sent__c</field>
+        <operation>equals</operation>
+        <value>No</value>
+    </filters>
+    <filters>
+        <field>Communication__c</field>
+        <operation>equals</operation>
+        <value>Medium,Low</value>
+    </filters>
+    <filters>
+        <field>Relevance_Experience__c</field>
+        <operation>equals</operation>
+        <value>Medium,Low</value>
+    </filters>
+    <filters>
+        <field>Intent__c</field>
+        <operation>equals</operation>
+        <value>High,Medium</value>
+    </filters>
+    <filters>
+        <field>Interview_Date_Time_AC__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>8/22/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Interview_Date_Time_AC__c</field>
+        <operation>lessOrEqual</operation>
+        <value>8/27/2022 12:00 AM</value>
+    </filters>
+    <label>Offer Reject OL From 22 Aug</label>
+</ListView>

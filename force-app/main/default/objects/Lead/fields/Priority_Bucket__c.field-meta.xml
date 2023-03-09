@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_Bucket__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;High&apos;))) ,&apos;PLATINUM LEADS&apos;,
+
+IF(OR(AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;)),AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;))) ,&apos;GOLD LEADS&apos;,
+
+IF(OR(AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;)),AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Low&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;Low&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Low&apos;),ISPICKVAL( Communication__c , &apos;High&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;)),AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;))) ,&apos;SILVER LEADS&apos;,
+
+IF(OR(AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;Low&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;)),AND(ISPICKVAL(Intent__c , &apos;Medium&apos;),ISPICKVAL( Communication__c , &apos;Low&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;)),AND(ISPICKVAL(Intent__c , &apos;High&apos;),ISPICKVAL( Communication__c , &apos;Low&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Low&apos;),ISPICKVAL( Communication__c , &apos;Low&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Low&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;High&apos;)),AND(ISPICKVAL(Intent__c , &apos;Low&apos;),ISPICKVAL( Communication__c , &apos;Medium&apos;),ISPICKVAL( Financials__c , &apos;Low&apos;))) ,&apos;BRONZE LEADS&apos;,
+
+&apos;OTHER LEADS&apos;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Priority Bucket</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

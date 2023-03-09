@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Invalid__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Invalid</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unprofessional behavior</fullName>
+                <default>false</default>
+                <label>Unprofessional behavior</label>
+            </value>
+            <value>
+                <fullName>Promised learner to help financially</fullName>
+                <default>false</default>
+                <label>Promised learner to help financially</label>
+            </value>
+            <value>
+                <fullName>False promise regarding study material</fullName>
+                <default>false</default>
+                <label>False promise regarding study material</label>
+            </value>
+            <value>
+                <fullName>False promise for recorded lectures</fullName>
+                <default>false</default>
+                <label>False promise for recorded lectures</label>
+            </value>
+            <value>
+                <fullName>False promise for educator change</fullName>
+                <default>false</default>
+                <label>False promise for educator change</label>
+            </value>
+            <value>
+                <fullName>Incorrect number of students pitched in a batch</fullName>
+                <default>false</default>
+                <label>Incorrect number of students pitched in a batch</label>
+            </value>
+            <value>
+                <fullName>1 on 1 attention during class</fullName>
+                <default>false</default>
+                <label>1 on 1 attention during class</label>
+            </value>
+            <value>
+                <fullName>English/personality development or any other class which is not mentioned in our modules</fullName>
+                <default>false</default>
+                <label>English/personality development or any other class which is not mentioned in our modules</label>
+            </value>
+            <value>
+                <fullName>No follow up</fullName>
+                <default>false</default>
+                <label>No follow up</label>
+            </value>
+            <value>
+                <fullName>Wrong disposition</fullName>
+                <default>false</default>
+                <label>Wrong disposition</label>
+            </value>
+            <value>
+                <fullName>ZT-Talktime</fullName>
+                <default>false</default>
+                <label>ZT-Talktime</label>
+            </value>
+            <value>
+                <fullName>False information regarding certificates</fullName>
+                <default>false</default>
+                <label>False information regarding certificates</label>
+            </value>
+            <value>
+                <fullName>Wrong testimony</fullName>
+                <default>false</default>
+                <label>Wrong testimony</label>
+            </value>
+            <value>
+                <fullName>No proper counseling efforts were done</fullName>
+                <default>false</default>
+                <label>No proper counseling efforts were done</label>
+            </value>
+            <value>
+                <fullName>False representation for scholarship</fullName>
+                <default>false</default>
+                <label>False representation for scholarship</label>
+            </value>
+            <value>
+                <fullName>False commitment for macbook reward</fullName>
+                <default>false</default>
+                <label>False commitment for macbook reward</label>
+            </value>
+            <value>
+                <fullName>Incorrect projects or more number of projects pitched</fullName>
+                <default>false</default>
+                <label>Incorrect projects or more number of projects pitched</label>
+            </value>
+            <value>
+                <fullName>Promised refund</fullName>
+                <default>false</default>
+                <label>Promised refund</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

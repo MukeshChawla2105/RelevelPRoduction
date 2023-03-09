@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_List_view</fullName>
+    <columns>Owner_Name__c</columns>
+    <columns>Source_Intent__c</columns>
+    <columns>SSM__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Total_Call_Count__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>First_Connected_Date_Time__c</columns>
+    <columns>Total_Call_Connected_Time__c</columns>
+    <columns>Interview_Date_Time_AC__c</columns>
+    <columns>Interview_Status_AO__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>First_Activity_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <filters>
+        <field>Interview_Date_Time_AC__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Call_Count__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Interview_Status_AO__c</field>
+        <operation>notContain</operation>
+        <value>Conducted,Rescheduled,No Show,Refer notes</value>
+    </filters>
+    <label>QA List view</label>
+    <sharedTo>
+        <role>QA_BUSINESS</role>
+        <role>QA_TECH</role>
+        <role>Relevel_Admin</role>
+    </sharedTo>
+</ListView>

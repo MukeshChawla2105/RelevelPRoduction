@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Lead_Transfer</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(  ISPICKVAL(Lead_Version__c, &quot;V0&quot;),ISCHANGED( OwnerId ), $User.Id != &apos;0055j000003aDju&apos;,$User.Id != &apos;0055j000003aDk8&apos;,$User.Id != &apos;0055j000003aDkA&apos;,$User.Id != &apos;0055j000006kX5Z&apos;, $User.Id != &apos;0055j000002pmqh&apos;,$User.Id != &apos;0055j0000067Oe0&apos;,$User.Id != &apos;0055j000005Ocdh&apos;,$User.Id != &apos;0055j000006kcsV&apos;,$User.Id != &apos;0055j0000068Pf5&apos;,$User.Id != &apos;0055j0000068Ous&apos;,$User.Id != &apos;0055j0000076EPl&apos;,$User.Id != &apos;0055j000006igm1&apos;, $User.Id != &apos;0055j000003aDk9&apos;,!ISCHANGED( Goal_Interested_In__c ) )</errorConditionFormula>
+    <errorMessage>LEAD OWNERSHIP CAN NOT BE TRANSFERRED !!!</errorMessage>
+</ValidationRule>

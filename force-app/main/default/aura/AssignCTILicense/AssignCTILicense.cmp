@@ -1,0 +1,24 @@
+<aura:component controller="AssignCTILicenseHandler" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:handler  name="init" value="{!this}" action="{!c.doinit}"/>
+    
+    <aura:attribute name="userList" type="List"/>
+    <aura:attribute name="selecteduserList" type="string[]"/>
+    <lightning:card footer="" title="">
+        <div style="padding:2%" >
+            <lightning:dualListbox name="languages"
+                                   label= "Assign CTI License"
+                                   sourceLabel="Available"
+                                   selectedLabel="Selected User"
+                                   fieldLevelHelp="Select your preferred languages"
+                                   options="{!v.userList}"
+                                   onchange="{! c.handleChange }"/>
+            <br/>
+            <div class="slds-align_absolute-center">
+                <lightning:button variant="brand"  label="Assign CTI License" title="Brand action" onclick="{!c.assignLic}" />
+                <lightning:button variant="brand" class="slds-float_right" label="Freeup CTI License" title="Brand action" onclick="{!c.reassignLic}" />
+            </div>
+            
+            
+        </div>
+    </lightning:card>
+</aura:component>

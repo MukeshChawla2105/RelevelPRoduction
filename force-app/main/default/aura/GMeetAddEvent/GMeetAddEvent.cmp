@@ -1,0 +1,277 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForRecordHome" 
+                access="global" controller="GMeetHandler">
+    
+    <aura:html tag="style">
+        .slds-modal__container{ 
+            height :70% !important;
+            max-width: 40rem !important; 
+            width: 80% !important;
+          }
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }       
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height: unset !important;
+            max-height: unset !important;
+        }
+        .slds-modal{
+            padding-top : 25px;
+        }
+    </aura:html>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onload}" />
+    <aura:attribute type="Date" name="startDateTime"  />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="disableButton" type="boolean" default="false"/>
+    <aura:attribute name="RescheduleCheckbox" type="boolean" default="false"/>
+    <aura:attribute name="RescheduleCheckboxDateTime" type="boolean" default="false"/>
+    <aura:attribute name="Userdetail" type="object"/>
+    <aura:attribute name="EmailListRecord" type="string[]"/>
+    <aura:attribute name="EmailList" type="string[]"/>
+    <aura:attribute name="Email" type="String"/>
+
+    <aura:attribute name="Eventrecord" type="Event" />
+    <aura:attribute name="LeadRecord" type="Object" />
+    <aura:attribute name="AvailableSlots" type="boolean" default="false"/>
+    <aura:attribute name="SlotNotAvailable" type="boolean" default="false"/> 
+    <aura:attribute name="BookedAndAvailbleSlotBoolean" type="boolean" default="false"/>
+    <aura:attribute name="BookedAndAvailbleSlots" type="List"/>
+
+    <aura:attribute name="myText" type="String" />
+    <aura:attribute name="FieldSetBoolean" type="boolean" default="true"/>
+    <aura:import library="lightning:alert" property="LightningAlert" />
+    
+    <header class="slds-modal__header">
+        <div class="slds-grid slds-gutters" style="background-color:#004d99;;padding:.5%;width: 99.9%;margin-left: .1%;font-size:20px;">
+            <div class="slds-col slds-size_1-of-3">
+                <span>
+                    
+                </span>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <span>
+                    <h2 style="color: white;font-size:20px; font-weight: bold;">
+                        Google Meet
+                    </h2>
+                </span>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <span>
+                    
+                </span>
+            </div>
+        </div>
+
+    </header>
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="4">
+                
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4">
+                
+        </lightning:layoutItem>
+        <lightning:layoutItem size="1">
+                
+        </lightning:layoutItem>
+        <lightning:layoutItem size="3">
+            <aura:if isTrue="{!not(empty(v.Eventrecord.GMeet_Event_Id__c))}">
+                <div class="slds-modal__content slds-p-around--x-small slds-size_1-of-1 slds-is-relative">
+                    <ui:inputCheckbox aura:id="ReSchedulecheckvalue" label="Reschedule Meeting" value=""  change="{!c.AllowRescheduling}" class="myCheckbox"/>
+                    <span class="slds-checkbox--faux" />
+                                <!-- lightning:input id="ReSchedulecheckvalue" type="checkbox" label="Reschedule Meeting" value=""  change="{!c.AllowRescheduling}"/ -->
+                </div>
+            </aura:if>
+                
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+    	<form class="slds-form_stacked">
+        <lightning:input aura:id="eventform" label="Event Subject"
+                         name="eventsubject"
+                         value="{!v.Eventrecord.Subject}"
+                         required="true" disabled="{!v.RescheduleCheckboxDateTime}"/>
+        <lightning:input type="text" aura:id="eventform" label="Event Description" 
+                         name="description" maxlength = "254" messageWhenTooLong = "Event Description Character Length must not be more than 254 characters!"
+                         value="{!v.Eventrecord.Event_Description__c}" disabled="{!v.RescheduleCheckbox}"/>
+        <lightning:input type="datetime" aura:id="eventform" label="Start Date and Time"
+                         name="startdatetime"                                         
+                         value="{!v.Eventrecord.StartDateTime}" min="{!v.startDateTime}"  onchange= "{!c.handleStartChange}"
+                         required="true" disabled="{!v.RescheduleCheckboxDateTime}"/>
+        <lightning:input type="datetime" aura:id="eventform" label="End Date and Time"
+                         name="enddatetime"                                         
+                         value="{!v.Eventrecord.EndDateTime}" onchange= "{!c.handleEndChange}"
+                         required="true" disabled="{!v.RescheduleCheckboxDateTime}"/>
+    
+                         <aura:if isTrue="{!v.SlotNotAvailable}">
+                            <ui:outputText value="{!v.myText}"/>
+                         </aura:if>
+                         <!--aura:if isTrue="{!v.BookedAndAvailbleSlotBoolean}">
+                            <a href="javascript:void(0)" onclick="{!c.viewAllSlot}">
+                                View All Slots
+                            </a>
+                         </aura:if -->
+                         
+    </form>
+    
+    </div>
+
+    <fieldset disabled="{!v.FieldSetBoolean}">
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative" disabled="true">
+        <!--lightning:input aura:id="EventCheckbox1" type="checkbox" label="{!v.Userdetail.Manager.Name}" checked = "" value="" name="{!v.Userdetail.Manager.Email}"  />
+        <lightning:input aura:id="EventCheckbox2" type="checkbox" label="{!v.Userdetail.Manager.Manager.Name}" checked = "" value="" name="{!v.Userdetail.Manager.Manager.Email}" / -->
+        <aura:if isTrue="{!not(empty(v.Eventrecord.GMeet_Event_Id__c))}">
+            <lightning:input aura:id="EventCheckbox1"  type="checkbox" checked ="{!v.Eventrecord.IsSMInvited__c}"  label="{!v.Userdetail.Manager.Name }" name="{!v.Userdetail.Manager.Email}"  disabled="{!v.RescheduleCheckbox}" onchange="{!c.CheckAvailableSlot}"/>(SM) &nbsp; &nbsp; &nbsp;
+                <aura:set attribute="else">
+                    <lightning:input aura:id="EventCheckbox1"  type="checkbox"  checked = "" label="{!v.Userdetail.Manager.Name}" value="" name="{!v.Userdetail.Manager.Email}"  onchange="{!c.CheckAvailableSlot}" />(SM) &nbsp; &nbsp; &nbsp;               
+                </aura:set>
+        </aura:if>
+
+        
+        <aura:if isTrue="{!not(empty(v.Eventrecord.GMeet_Event_Id__c))}">
+            <lightning:input aura:id="EventCheckbox2" type="checkbox" checked="{!v.Eventrecord.IsSSMInvited__c}" label="{!v.Userdetail.Manager.Manager.Name}" name="{!v.Userdetail.Manager.Manager.Email}" disabled="{!v.RescheduleCheckbox}" onchange="{!c.CheckAvailableSlotforSSM}"/>(SSM)
+                <aura:set attribute="else">
+                    <lightning:input aura:id="EventCheckbox2" type="checkbox" checked = "" label="{!v.Userdetail.Manager.Manager.Name}" name="{!v.Userdetail.Manager.Manager.Email}" onchange="{!c.CheckAvailableSlotforSSM}"/>(SSM)                 
+                </aura:set>
+        </aura:if>
+        <lightning:spinner aura:id="mySpinner" alternativeText="Processing.." title="Processing.." variant="brand" size="large" class="slds-hide"/>
+    </div>    
+</fieldset>
+    <div style="width: 550px; padding-left: 75px; margin-bottom: 50px">
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <lightning:input aura:id="inputfield" name="input1" label="Add other participants email id (Optional)" value="{!v.Email}" oncommit="{!c.addEmail}"
+                                pattern=".+@example.com"
+                                placeholder="username@example.com"
+                                messageWhenTooLong="Your email address must not be more than 50 characters."
+                                disabled="{!v.RescheduleCheckbox}"/>
+                <div role="listbox" aria-orientation="horizontal">
+                    <ul class="slds-listbox slds-listbox_inline slds-p-top_xxx-small" role="group" aria-label="Inputted Options:">
+                        <aura:iteration items="{!v.EmailListRecord}" var="item" indexVar="index">
+                            <lightning:pill name="{!index}" label="{!item}"  onclick="{! c.handleClick }">
+                                <aura:set attribute="media">
+                                    <lightning:icon iconName="standard:account"  alternativeText="Account"/>
+                                </aura:set>
+                            </lightning:pill>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+   
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="Neutral" class="slds-button slds-button_brand" label="Close" disabled="{!v.disableButton}" onclick="{!c.handleExit}"/>
+            <aura:if isTrue="{!v.Eventrecord.Id != null}">
+                    <lightning:button variant="Neutral" class="slds-button slds-button_brand" label="Cancel Meeting" disabled="{!v.disableButton}" onclick="{!c.CancelEvent}"/>
+                    <lightning:button type="submit" onclick="{!c.RescheduleEvent}" disabled="{!v.disableButton}" class="slds-button slds-button_brand">ReSchedule Meeting</lightning:button>               
+                <aura:set attribute="else">
+                        <lightning:button type="submit" onclick="{!c.createAction}" disabled="{!v.disableButton}" class="slds-button slds-button_brand">Create Meeting</lightning:button>                    
+                </aura:set>
+            </aura:if>
+    </div>
+
+    <aura:if isTrue="{!v.AvailableSlots}">
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Availability</h2>
+                    </header>
+                    <lightning:card>
+                        <aura:if isTrue="{!v.BookedAndAvailbleSlots.length > 0}">
+                            <div class="slds-table--header-fixed_container" style="height:450px;overflow: auto;">
+                                <div class="slds-modal__content slds-p-around_medium slds-scrollable" style="height:100%; overflow: auto;">
+                                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-scrollable">
+                                        <thead>
+                                            <tr class="slds-line-height_reset slds-text-title_caps">
+                                                <th  class="slds-is-resizable" scope="col">
+                                                    <div class="slds-truncate" title="Name">
+                                                        Start Time
+                                                    </div>
+                                                </th>
+                                                <th  class="slds-is-resizable" scope="col">
+                                                    <div class="slds-truncate" title="Account Number">
+                                                        End Time
+                                                    </div>
+                                                </th>
+                                                <th class="slds-is-resizable" scope="col">
+                                                    <div class="slds-truncate" title="Industry">
+                                                        Available or Booked
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <aura:if isTrue="{!v.BookedAndAvailbleSlots.length > 0}">
+                                            <tbody>
+                                                <aura:iteration items="{!v.BookedAndAvailbleSlots}" var="Slots">
+                                                    <tr class="slds-hint-parent">
+                                                        
+                                                        <th data-label="Name" scope="row">
+                                                            <div class="slds-truncate" title="{!Slots.SlotStartTime}">
+                                                                <!-- lightning:formattedDateTime value="{!Slots.SlotStartTime}" timeZone="UTC" / --> 
+                                                                {!Slots.SlotStartTime}<!--lightning:formattedDateTime value="{!Slots.SlotStartTime}" year="numeric" day="2-digit" month="long" hour="2-digit" minute="2-digit"/-->                                                   
+                                                            </div>
+                                                        </th>
+                                                        <td data-label="Account Number">
+                                                            <div class="slds-truncate" title="{!Slots.SlotEndTime}">
+                                                                <!-- lightning:formattedDateTime value="{!Slots.SlotEndTime}" timeZone="UTC" / -->
+                                                                {!Slots.SlotEndTime} <!--lightning:formattedDateTime value="{!Slots.SlotEndTime}" year="numeric" day="2-digit" month="long" hour="2-digit" minute="2-digit"/--> 
+                                                            </div>
+                                                        </td>
+                                                        <td data-label="Industry">
+                                                                <aura:if isTrue="{!Slots.SlotBookedOrNot == 'Available'}">
+                                                                    <b style="color:green;">Available</b>
+                                                                    <aura:set attribute="else">
+                                                                        <b style="color:red;">Booked</b>
+                                                                    </aura:set>
+                                                                  </aura:if>
+            
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                </aura:iteration>
+                                            </tbody>
+                                        </aura:if>
+                                    </table>
+                                </div>
+
+                            </div>
+                            
+                            <aura:set attribute="else">
+                                <lightning:card>
+                                    <div style=" border-radius: 10px; width: 500px; height:50px; font-size: 25px; margin-top: 100px; margin-bottom: 120px" class="slds-align_absolute-center slds-notify slds-notify_alert" role="alert" >
+                                        
+                                        All The Slots Are Available!!!!!
+                                        
+                                    </div>
+                                </lightning:card>
+                            </aura:set>
+                            
+                        </aura:if>
+                        
+                        
+                    </lightning:card>
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral"
+                                              label="Cancel"
+                                              title="Cancel"
+                                              onclick="{! c.closeModel }"/>
+                        </footer>
+            </div>
+        </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+           
+</aura:component>

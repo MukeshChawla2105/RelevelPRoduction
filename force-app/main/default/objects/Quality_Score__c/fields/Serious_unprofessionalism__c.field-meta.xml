@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Serious_unprofessionalism__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ZT - Serious unprofessionalism (Profanity / misbehavior with learner or parents over call, mail or other communication mediums (possible offences include offensive comments, swear words or opinions that harm the sentiments of the learner or parent on religious, caste, creed, sexuality, financial status, or any other discriminatory practices)</description>
+    <externalId>false</externalId>
+    <label>Serious unprofessionalism</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

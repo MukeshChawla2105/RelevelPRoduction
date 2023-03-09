@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status_of_Payment__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Status of Payment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status_of_payment__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Loan Got Rejected</fullName>
+                <default>false</default>
+                <label>Loan Got Rejected</label>
+            </value>
+            <value>
+                <fullName>Does not have required docs for loan process</fullName>
+                <default>false</default>
+                <label>Does not have required docs for loan process</label>
+            </value>
+            <value>
+                <fullName>Not Responding</fullName>
+                <default>false</default>
+                <label>Not Responding</label>
+            </value>
+            <value>
+                <fullName>NATC</fullName>
+                <default>false</default>
+                <label>NATC</label>
+            </value>
+            <value>
+                <fullName>Down Payment Challenge</fullName>
+                <default>false</default>
+                <label>Down Payment Challenge</label>
+            </value>
+            <value>
+                <fullName>Need higher Loan Tenure</fullName>
+                <default>false</default>
+                <label>Need higher Loan Tenure</label>
+            </value>
+            <value>
+                <fullName>Enrolled with Competitor</fullName>
+                <default>false</default>
+                <label>Enrolled with Competitor</label>
+            </value>
+            <value>
+                <fullName>Trust Issue</fullName>
+                <default>false</default>
+                <label>Trust Issue</label>
+            </value>
+            <value>
+                <fullName>Defferred Payment</fullName>
+                <default>false</default>
+                <label>Defferred Payment</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Looking for more discount</fullName>
+                <default>false</default>
+                <label>Looking for more discount</label>
+            </value>
+            <value>
+                <fullName>Payment Deferred</fullName>
+                <default>false</default>
+                <label>Payment Deferred</label>
+            </value>
+            <value>
+                <fullName>Followup</fullName>
+                <default>false</default>
+                <label>Followup</label>
+            </value>
+            <value>
+                <fullName>Applied</fullName>
+                <default>false</default>
+                <label>Applied</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Not Ready to share Documents for loan</fullName>
+                <default>false</default>
+                <label>Not Ready to share Documents for loan</label>
+            </value>
+            <value>
+                <fullName>Not Reachable</fullName>
+                <default>false</default>
+                <label>Not Reachable</label>
+            </value>
+            <value>
+                <fullName>Switched Off</fullName>
+                <default>false</default>
+                <label>Switched Off</label>
+            </value>
+            <value>
+                <fullName>Did not pick</fullName>
+                <default>false</default>
+                <label>Did not pick</label>
+            </value>
+            <value>
+                <fullName>Busy</fullName>
+                <default>false</default>
+                <label>Busy</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Call Not Received</controllingFieldValue>
+            <valueName>Not Reachable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Not Received</controllingFieldValue>
+            <valueName>Switched Off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Not Received</controllingFieldValue>
+            <valueName>Did not pick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Not Received</controllingFieldValue>
+            <valueName>Busy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Paid</controllingFieldValue>
+            <valueName>Followup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loan Process</controllingFieldValue>
+            <valueName>Applied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loan Process</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loan Process</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Down Payment Challenge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Need higher Loan Tenure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Enrolled with Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Looking for more discount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Not Ready to share Documents for loan</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

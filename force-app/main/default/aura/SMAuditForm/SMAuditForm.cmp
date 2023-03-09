@@ -1,0 +1,651 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction" 
+                access="global" controller= "SMAuditFormController">
+    
+    <aura:attribute name="SMAuditFormRecord" type="SM_Call_Audit_Form__c" default="{
+                                                                                   'sobjectType': 'SM_Call_Audit_Form__c',
+                                                                                   'Opening_Call_Number__c': '',
+                                                                                   'Opening_End_Date__c': '',
+                                                                                   'Opening_End_Time_in_min__c': '',
+                                                                                   'Opening_End_Time_in_sec__c': '',
+                                                                                   'Opening_Start_Date__c': '',
+                                                                                   'Opening_Start_Time_in_min__c': '',
+                                                                                   'Opening_Start_Time_in_sec__c': '',
+                                                                                   'Opening_Audited_By__c': '',
+                                                                                   'Opening_Score__c': '',
+                                                                                   'Opening_Positive_Points__c': '',
+                                                                                   'Opening_Area_Of_Improvement__c': '',
+                                                                                   'Probing_Call_Number__c': '',
+                                                                                   'Probing_Start_Date__c': '',
+                                                                                   'Probing_Start_Time_in_min__c': '',
+                                                                                   'Probing_Start_Time_in_sec__c': '',
+                                                                                   'Probing_End_Date__c': '',
+                                                                                   'Probing_End_Time_in_min__c': '',
+                                                                                   'Probing_End_Time_in_sec__c': '',
+                                                                                   'Probing_Audited_by__c': '',
+                                                                                   'Probing_Score__c': '',
+                                                                                   'Probing_Positive_Points__c': '',
+                                                                                   'Probing_Area_of_Improvement__c': '',
+                                                                                   'Need_Mapping_Call_Number__c': '',
+                                                                                   'Need_Mapping_Start_Date__c': '',
+                                                                                   'Need_mapping_Start_Time_in_min__c': '',
+                                                                                   'Need_mapping_Start_Time_in_sec__c': '',
+                                                                                   'Need_Mapping_End_Date__c': '',
+                                                                                   'Need_Mapping_End_Time_in_min__c': '',
+                                                                                   'Need_Mapping_End_Time_in_sec__c': '',
+                                                                                   'Need_Mapping_Audited_By__c': '',
+                                                                                   'Need_Mapping_Score__c': '',
+                                                                                   'Need_Mapping_Positive_points__c': '',
+                                                                                   'Need_Mapping_Area_of_Improvement__c': '',
+                                                                                   'Closure_Call_Number__c': '',
+                                                                                   'Closure_Start_Date__c': '',
+                                                                                   'Closure_Start_Time_in_min__c': '',
+                                                                                   'Closure_Start_Time_in_sec__c': '',
+                                                                                   'Closure_End_Date__c': '',
+                                                                                   'Closure_End_Time_in_min__c': '',
+                                                                                   'Closure_End_Time_in_sec__c': '',
+                                                                                   'Closure_Audited_by__c': '',
+                                                                                   'Closure_Score__c': '',
+                                                                                   'Closure_Positive_Points__c': '',
+                                                                                   'Closure_Area_of_Improvement__c': '',
+                                                                                   'Subjective_Call_Number__c': '',
+                                                                                   'Subjective_Start_Date__c': '',
+                                                                                   'Subjective_Start_Time_in_min__c': '',
+                                                                                   'Subjective_Start_Time_in_sec__c': '',
+                                                                                   'Subjective_End_Date__c': '',
+                                                                                   'Subjective_End_Time_in_min__c': '',
+                                                                                   'Subjective_End_Time_in_sec__c': '',
+                                                                                   'Subjective_Audited_by__c': '',
+                                                                                   'Subjective_Score__c': '',
+                                                                                   'Subjective_Positive_Points__c': '',
+                                                                                   'Subjective_Area_of_Improvement__c': '',
+                                                                                   'Referral_Call_Number__c': '',
+                                                                                   'Referral_Start_Date__c': '',
+                                                                                   'Referral_Start_Time_in_min__c': '',
+                                                                                   'Referral_Start_Time_in_sec__c': '',
+                                                                                   'Referral_End_Date__c': '',
+                                                                                   'Referral_End_Time_in_min__c': '',
+                                                                                   'Referral_End_Time_in_sec__c': '',
+                                                                                   'Referral_Audited_by__c': '',
+                                                                                   'Referral_Score__c': '',
+                                                                                   'Referral_Positive_Points__c': '',
+                                                                                   'Referral_Area_of_Improvement__c': '',
+                                                                                   'Customer_profile_details__c': '',
+                                                                                   'Email_Sent__c': '',                
+                                                                                   'Follow_up_adherenece__c': '',
+                                                                                   'Follow_up_created__c': '',
+                                                                                   'Lead_Stages__c': '',
+                                                                                   'Notes__c': '',
+                                                                                   'Temperature__c': '',
+                                                                                   'Temperature_Type__c': '',                
+                                                                                   }"/>
+    <aura:handler name="init" value="{!this}" action="{!c.loadOptions}" />
+    <aura:attribute name="recordId" type="String" default = "00Q0w0000037ITQEA2"/>
+    
+    <aura:attribute name="options" type="List" />
+    <aura:attribute name="isFormFilledAlready" type="boolean" default = "false"/>
+    <aura:attribute name="AllDialledCall" type="List" /> 
+    <aura:attribute name="StartAndEndTimeMinSec" type="List" />
+    <aura:attribute name="MapofPickListvalue" type="Object" />
+    <aura:attribute name="emptyWrapper" type="boolean" default="false"/>
+    
+    <!-- div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading_medium">Sales Manager Audit Form</h4>
+    </div -->
+    <aura:if isTrue="{!v.emptyWrapper}">
+        <lightning:card>
+            <div style=" border-radius: 10px; width:750px; height:50px; font-size: 25px; margin-top: 25px;" class="slds-align_absolute-center slds-notify slds-notify_alert slds-alert_warning" role="alert" >
+                
+                There is no Connected Call Activity on this Lead!!!!!
+                
+            </div>
+        </lightning:card>
+        
+        <aura:set attribute="else">
+            <table class="table slds-table slds-table_bordered slds-table_fixed-layout" >
+                <thead style="">
+                    <tr class="slds-text-heading_label slds-line-height_reset">              
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_small slds-is-resizable" title="Name">Call number</div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Start Date </div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Start Time (in min) </div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Start Time (in sec) </div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">End Date</div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">End Time (in min)</div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">End Time (in sec)</div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Score</div></th>
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Positive Points</div></th> 
+                        <th style="" scope="col"><div class="slds-cell-wrap slds-truncate slds-p-left_x-small" title="">Area of Improvement</div></th>
+                    </tr>
+                </thead>
+                <tbody style="">
+                    
+                    <tr style="">
+                        <td>
+                            <h2 class="title slds-text-heading_medium ">Opening Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="">  
+                        <td  >
+                            
+                            <lightning:select name="Opening Call Number" label="" required = "true" value="{!v.SMAuditFormRecord.Opening_Call_Number__c}" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" />
+                                </aura:iteration>
+                            </lightning:select>
+                            
+                        </td>
+                        <td >
+                            <lightning:input name="Opening_Start_Date" type="date" label="" value="{!v.SMAuditFormRecord.Opening_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td> 
+                        <td >
+                            <lightning:select name="Opening Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Opening_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Opening Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Opening_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:input name="Opening_End_Date_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Opening_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Opening End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Opening_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Opening End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Opening_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Opening Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Opening_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:textarea name="Opening_Positive_Points__c" type="Text" label="" value="{!v.SMAuditFormRecord.Opening_Positive_Points__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        <td >
+                            <lightning:textarea name="Opening_Area_Of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Opening_Area_Of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                    </tr>
+                    <tr style="width:100%">
+                        <td>
+                            <h2 class="title slds-text-heading_medium">Probing Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="width:10%">
+                        <td >
+                            <lightning:select name="Probing Call Number" required="true" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_Call_Number__c}" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:input name="Probing_Start_Date" type="date" label="" value="{!v.SMAuditFormRecord.Probing_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Probing Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Probing Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:input name="Probing_End_Date_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Probing_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                        <lightning:select name="Probing End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Probing End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Probing Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Probing_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                            
+                        </td>
+                        
+                        <td >
+                            <lightning:textarea name="Probing_Positive_Points__c" type="Text" label="" value="{!v.SMAuditFormRecord.Probing_Positive_Points__c}" disabled="{!v.isFormFilledAlready}"/> 
+                        </td>
+                        <td >
+                            <lightning:textarea name="Probing_Area_of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Probing_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                    </tr>
+                    <tr style="width:100%">
+                        <td>
+                            <h2 class="title slds-text-heading_medium">Need Mapping Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="width:10%">
+                        <td >
+                            <lightning:select name="Need Mapping Call Number" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_Mapping_Call_Number__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:input name="Need_Mapping_Start_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Need_Mapping_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Need mapping Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_mapping_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Need mapping Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_mapping_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:input name="Need_Mapping_End_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Need_Mapping_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                        <lightning:select name="Need mapping End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_Mapping_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Need mapping End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_Mapping_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Need Mapping Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Need_Mapping_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td >
+                        
+                        <td >
+                            <lightning:textarea name="Need_Mapping_Positive_points__c" type="Text" label="" value="{!v.SMAuditFormRecord.Need_Mapping_Positive_points__c}" disabled="{!v.isFormFilledAlready}"/>                            
+                        </td>
+                        <td >
+                            <lightning:textarea name="Need_Mapping_Area_of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Need_Mapping_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                            
+                        </td>
+                    </tr>
+                    <tr style="width:100%">
+                        <td>
+                            <h2 class="title slds-text-heading_medium">Closure Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="width:10%">
+                        <td>
+                            <lightning:select name="Closure Call Number" label="" aura:id="mySelectQU" required="true" value="{!v.SMAuditFormRecord.Closure_Call_Number__c}" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Closure_Start_Date" type="Date" label="" value="{!v.SMAuditFormRecord.Closure_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Closure Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Closure_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Closure Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Closure_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Closure_End_Date_Time__c" type="Date" label="" value="{!v.SMAuditFormRecord.Closure_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                        <lightning:select name="Closure End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Closure_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Closure End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Closure_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:select name="Opening Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Closure_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:textarea name="Closure_Positive_Points__c" type="Text" label="" value="{!v.SMAuditFormRecord.Closure_Positive_Points__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td>
+                            <lightning:textarea name="Closure_Area_of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Closure_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>   
+                        
+                    </tr>
+                    <tr style="width:100%">
+                        <td>
+                            <h2 class="title slds-text-heading_medium">Subjective Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="width:10%">
+                        <td>
+                            <lightning:select name="Subjective Call Number" label="" aura:id="mySelectQU" required="true" value="{!v.SMAuditFormRecord.Subjective_Call_Number__c}" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Subjective_Start_Date" type="date" label="" value="{!v.SMAuditFormRecord.Subjective_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>                        
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Subjective Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Subjective_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Subjective Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Subjective_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Subjective_End_Date_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Subjective_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                        <lightning:select name="Subjective End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Subjective_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td>
+                            <lightning:select name="Subjective End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Subjective_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:select name="Subjective Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Subjective_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:textarea name="Subjective_Positive_Points__c" type="Text" label="" value="{!v.SMAuditFormRecord.Subjective_Positive_Points__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        <td>
+                            <lightning:textarea name="Subjective_Area_of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Subjective_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                    </tr>
+                    <tr style="width:100%">
+                        <td>
+                            <h2 class="title slds-text-heading_medium">Referral Details</h2>
+                        </td>
+                    </tr>
+                    <tr style="width:10%">
+                        <td>
+                            <lightning:select name="Referral Call Number" label="" aura:id="mySelectQU" required="true" value="{!v.SMAuditFormRecord.Referral_Call_Number__c}" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.AllDialledCall}" var="item">
+                                    <option text="{!item.value}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Referral_Start_Datec" type="date" label="" value="{!v.SMAuditFormRecord.Referral_Start_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                            <lightning:select name="Referral Start Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Referral_Start_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Referral Start Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Referral_Start_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:input name="Referral_End_Date_Time__c" type="date" label="" value="{!v.SMAuditFormRecord.Referral_End_Date__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td >
+                        <lightning:select name="Referral End Time (in min)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Referral_End_Time_in_min__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td >
+                            <lightning:select name="Referral End Time (in sec)" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Referral_End_Time_in_sec__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.StartAndEndTimeMinSec}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:select name="Referral Score" label="" aura:id="mySelectQU" value="{!v.SMAuditFormRecord.Referral_Score__c}" required="true" disabled="{!v.isFormFilledAlready}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.options}" var="item">
+                                    <option text="{!item.value}" value="{!item.key}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        
+                        <td>
+                            <lightning:textarea name="Referral_Area_of_Improvement__c" type="Text" label="" value="{!v.SMAuditFormRecord.Referral_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                        <td>
+                            <lightning:textarea name="Referral Area of Improvement" type="Text" label="" value="{!v.SMAuditFormRecord.Referral_Area_of_Improvement__c}" disabled="{!v.isFormFilledAlready}"/>
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>    
+    
+    <div class="slds-p-around_x-small">
+        <lightning:select name="Follow up Created" label="Follow up Created"  value="{!v.SMAuditFormRecord.Follow_up_created__c}" disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Follow_up_created__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Follow up Adherence" label="Follow up Adherence"  value="{!v.SMAuditFormRecord.Follow_up_adherenece__c}"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Follow_up_adherenece__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Customer profile details" label="Customer profile details" value="{!v.SMAuditFormRecord.Customer_profile_details__c}"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Customer_profile_details__c}" var="item">
+                <option text="{!item}" value="{!item}"/>
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Email Sent" label="Email Sent" value="{!v.SMAuditFormRecord.Email_Sent__c}"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Email_Sent__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Lead Stages" label="Lead Stages"  value="{!v.SMAuditFormRecord.Lead_Stages__c}"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Lead_Stages__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Notes" label="Notes" value="{!v.SMAuditFormRecord.Notes__c}"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Notes__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <lightning:select name="Temperature" label="Temperature" value="{!v.SMAuditFormRecord.Temperature__c}" required="true"  disabled="{!v.isFormFilledAlready}">
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.MapofPickListvalue.Temperature__c}" var="item">
+                <option text="{!item}" value="{!item}" />
+            </aura:iteration>
+        </lightning:select>
+        <br></br>
+        <aura:if isTrue="{!v.SMAuditFormRecord.Temperature__c == 'Verified' }">
+            <lightning:select name="Temperature Type" label="Temperature Type"  value="{!v.SMAuditFormRecord.Temperature_Type__c}"  disabled="{!v.isFormFilledAlready}">
+                <option value="">choose one...</option>
+                <aura:iteration items="{!v.MapofPickListvalue.Temperature_Type__c}" var="item">
+                    <option text="{!item}" value="{!item}" />
+                </aura:iteration>
+            </lightning:select>
+        </aura:if> 
+    </div>
+    
+    <aura:if isTrue="{!v.isFormFilledAlready }">
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1 slds-p-around_large slds-align_absolute-center">
+                <div role="contentinfo" style ="font-weight: bold; background-color:#8fd9a1;padding:2%;">
+                    Total Score : {!v.SMAuditFormRecord.Final_Total_Score__c }
+                </div>
+            </div> 
+        
+        
+        <aura:set attribute="else">
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1 slds-p-around_large slds-align_absolute-center">
+                <div role="contentinfo">
+                    <lightning:button label="Save" title="Save" onclick="{!c.SaveSMAuditForm }" class="marginTop" disabled="{!v.isFormFilledAlready}"/>
+                    <!-- lightning:button label="Cancel" title="Cancel" onclick="{!c.CloseQuickAction }" class="marginTop"/ -->
+                </div>
+            </div> 
+        </aura:set>
+    </aura:if>
+    
+    </aura:set>
+    </aura:if>
+    
+    
+</aura:component>

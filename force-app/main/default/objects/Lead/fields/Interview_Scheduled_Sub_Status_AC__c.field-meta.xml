@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interview_Scheduled_Sub_Status_AC__c</fullName>
+    <externalId>false</externalId>
+    <label>Interview Scheduled Sub-Status  (AC)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Responding</fullName>
+                <default>false</default>
+                <label>Not Responding</label>
+            </value>
+            <value>
+                <fullName>Logistics - Laptop/Internet Issue</fullName>
+                <default>false</default>
+                <label>Logistics - Laptop/Internet Issue</label>
+            </value>
+            <value>
+                <fullName>Call not Received</fullName>
+                <default>false</default>
+                <label>Call not Received</label>
+            </value>
+            <value>
+                <fullName>Call Received</fullName>
+                <default>false</default>
+                <label>Call Received</label>
+            </value>
+            <value>
+                <fullName>Switched Off</fullName>
+                <default>false</default>
+                <label>Switched Off</label>
+            </value>
+            <value>
+                <fullName>Learner Disconnected</fullName>
+                <default>false</default>
+                <label>Learner Disconnected</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Dropped the call</fullName>
+                <default>false</default>
+                <label>Dropped the call</label>
+            </value>
+            <value>
+                <fullName>Not Relevant</fullName>
+                <default>false</default>
+                <label>Not Relevant</label>
+            </value>
+            <value>
+                <fullName>Awareness - Has no clue about Course/Company</fullName>
+                <default>false</default>
+                <label>Awareness - Has no clue about Course/Company</label>
+            </value>
+            <value>
+                <fullName>Communication - Can not Understand English</fullName>
+                <default>false</default>
+                <label>Communication - Can not Understand English</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Persona Mismatch</fullName>
+                <default>false</default>
+                <label>Persona Mismatch</label>
+            </value>
+            <value>
+                <fullName>Might be Interested for future cohorts</fullName>
+                <default>false</default>
+                <label>Might be Interested for future cohorts</label>
+            </value>
+            <value>
+                <fullName>Follow up for confirmation on time &amp; day slot</fullName>
+                <default>false</default>
+                <label>Follow up for confirmation on time &amp; day slot</label>
+            </value>
+            <value>
+                <fullName>Requested Call Back</fullName>
+                <default>false</default>
+                <label>Requested Call Back</label>
+            </value>
+            <value>
+                <fullName>Logistics Issue - Need time for arrangement</fullName>
+                <default>false</default>
+                <label>Logistics Issue - Need time for arrangement</label>
+            </value>
+            <value>
+                <fullName>Intent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Intent</label>
+            </value>
+            <value>
+                <fullName>Not Reachable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Reachable</label>
+            </value>
+            <value>
+                <fullName>SF Issue/Call Not Going Through</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SF Issue/Call Not Going Through</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

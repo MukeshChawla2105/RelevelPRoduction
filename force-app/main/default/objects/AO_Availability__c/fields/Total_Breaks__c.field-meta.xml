@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Breaks__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Breaks</label>
+    <summaryFilterItems>
+        <field>AO_Availability_Log__c.Status__c</field>
+        <operation>equals</operation>
+        <value>On Break</value>
+    </summaryFilterItems>
+    <summaryForeignKey>AO_Availability_Log__c.AO_Availability__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

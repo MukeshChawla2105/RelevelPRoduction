@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_talk_time_in_last_30_days__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(FLOOR( Talk_Time_Last_30_Days__c/ 60))
+&amp;&apos;hr&apos;&amp;
+ LEFT(TEXT(MOD(Talk_Time_Last_30_Days__c,60)), 4) 
+&amp;&apos;min&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total talk time in last 30 days</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

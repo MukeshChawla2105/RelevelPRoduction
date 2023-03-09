@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Highest_degree_V__c</fullName>
+    <externalId>false</externalId>
+    <label>Highest degree (V)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Occupation_Profession__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bachelors</fullName>
+                <default>false</default>
+                <label>Bachelors</label>
+            </value>
+            <value>
+                <fullName>Masters</fullName>
+                <default>false</default>
+                <label>Masters</label>
+            </value>
+            <value>
+                <fullName>Class 12th</fullName>
+                <default>false</default>
+                <label>Class 12th</label>
+            </value>
+            <value>
+                <fullName>BA/BBA/BCom</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BA/BBA/BCom</label>
+            </value>
+            <value>
+                <fullName>BCA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BCA</label>
+            </value>
+            <value>
+                <fullName>BE/BTech/BS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BE/BTech/BS</label>
+            </value>
+            <value>
+                <fullName>Class 12th or below</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Class 12th or below</label>
+            </value>
+            <value>
+                <fullName>MBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MBA</label>
+            </value>
+            <value>
+                <fullName>MCA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MCA</label>
+            </value>
+            <value>
+                <fullName>ME/Mtech/MS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ME/Mtech/MS</label>
+            </value>
+            <value>
+                <fullName>Other Bachelors degree</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Bachelors degree</label>
+            </value>
+            <value>
+                <fullName>Other Masters degree</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Masters degree</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Working Professional</controllingFieldValue>
+            <controllingFieldValue>Student</controllingFieldValue>
+            <valueName>Bachelors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Professional</controllingFieldValue>
+            <controllingFieldValue>Student</controllingFieldValue>
+            <valueName>Masters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Professional</controllingFieldValue>
+            <controllingFieldValue>Student</controllingFieldValue>
+            <valueName>Class 12th</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

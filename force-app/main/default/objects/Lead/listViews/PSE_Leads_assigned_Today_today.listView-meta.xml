@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSE_Leads_assigned_Today_today</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Interview_Date__c</columns>
+    <columns>Interview_slot__c</columns>
+    <columns>New_Lead_Assigned_Date__c</columns>
+    <columns>Last_Connected_Date__c</columns>
+    <columns>Last_Called_Date_Time__c</columns>
+    <columns>Total_Calls_after_assigned__c</columns>
+    <columns>Connected_calls_After_Assigned__c</columns>
+    <columns>Application_Form_Completed_Date_Time__c</columns>
+    <columns>Lead_Version__c</columns>
+    <columns>AO_Interview_Status_Manual__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Email__c</field>
+        <operation>equals</operation>
+        <value>shubham.singh1@relevel.com,anuja.palegar@relevel.com,tejas.kadam@relevel.com</value>
+    </filters>
+    <filters>
+        <field>Owner_Change_Datetime__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>PSE- Leads assigned Today</label>
+</ListView>

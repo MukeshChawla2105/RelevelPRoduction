@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Tempt_can_not_be_null_if_Temperature</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCHANGED(Temperature__c)</errorConditionFormula>
+    <errorDisplayField>Sub_Temperature__c</errorDisplayField>
+    <errorMessage>Please fill Sub Temperature value</errorMessage>
+</ValidationRule>

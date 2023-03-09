@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temperature_Can_not_be_null</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( TEXT(Temperature__c  ) )</errorConditionFormula>
+    <errorDisplayField>Temperature__c</errorDisplayField>
+    <errorMessage>Please ProvideTemperature</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_fraud__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ZT - Financial fraud (Collecting card details / Financial fraud / Asking for money transfer / Proxy usage / Data breach (Card, UPI, Wallet details, ATM Pin, CVV number, OTP, requesting to download irrelevant apps)</description>
+    <externalId>false</externalId>
+    <label>Financial fraud</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

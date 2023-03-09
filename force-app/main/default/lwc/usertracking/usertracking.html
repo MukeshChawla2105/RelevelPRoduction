@@ -1,0 +1,62 @@
+<template>
+  <article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure">
+          <lightning-icon icon-name="action:log_event"></lightning-icon>
+          <span class="slds-assistive-text">User tracking</span>
+        </div>
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <span>User tracking</span>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <div class="slds-card__body slds-card__body_inner">
+      <button class="slds-button slds-button_neutral" onclick={checkin} disabled={disable_checkin}>CheckIn</button>
+
+      <button class="slds-button slds-button_neutral" onclick={checkoutPopupHandler} disabled={disable_checkout}>Checkout</button>
+
+      <template if:true={areDetailsVisible}>
+
+        <lightning-button variant="Neutral" label={BreakTimeButtonLabel} title="Non-primary action" onclick={BreakTime} disabled={disableButton} class="slds-m-left_x-small"></lightning-button>
+        <!-- lightning-button variant="Neutral" label={MeetingButtonlabel} title="Non-primary action" onclick={MeetingStartEnd} disabled={disableButton} class="slds-m-left_x-small"></lightning-button -->
+        
+        
+
+      </template>
+
+
+
+    </div>
+
+  </article>
+<template if:true={showCheckoutPopup}>
+  <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+    class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <div class="slds-modal__header">Are you sure you wanna Checkout for the day.</div>
+      <div class="slds-modal__content slds-p-around_medium modalBody" id="modal-content-id-1">
+        <template if:true={showCheckoutSpinner}>
+          <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+        <div class="slds-align_absolute-center">
+        <lightning-button variant="success" label="Yes" title="Successful action" onclick={checkout}
+            class=""></lightning-button>
+        <lightning-button variant="destructive" label="No" title="Destructive action" onclick={dismissCheckoutPopupHanlder}
+          class=""></lightning-button>
+      </div>
+      </div>
+      <div class="slds-modal__footer">
+        <!--lightning-button variant="destructive" label="Checkout" title="Checkout" icon-name="utility:logout"
+          icon-position="left" class="slds-m-left_x-small slds-m-right_medium" onclick={checkout}></lightning-button-->
+
+        <button class="slds-button slds-button_neutral" aria-label="Cancel and close"
+          onclick={dismissCheckoutPopupHanlder}>Cancel</button>
+      </div>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>
+</template>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interview_Sub_Status_AO__c</fullName>
+    <externalId>false</externalId>
+    <label>Interview Sub-Status (AO)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Interview_Status_AO__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Learner - No Show</fullName>
+                <default>false</default>
+                <label>Learner - No Show</label>
+            </value>
+            <value>
+                <fullName>AO - No Show</fullName>
+                <default>false</default>
+                <label>AO - No Show</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Reschedule</fullName>
+                <default>false</default>
+                <label>Reschedule</label>
+            </value>
+            <value>
+                <fullName>Wrong Schedule Conducted by AC</fullName>
+                <default>false</default>
+                <label>Wrong Schedule Conducted by AC</label>
+            </value>
+            <value>
+                <fullName>Scheduled outside working hours</fullName>
+                <default>false</default>
+                <label>Scheduled outside working hours</label>
+            </value>
+            <value>
+                <fullName>Logistics - Laptop/Internet Issue</fullName>
+                <default>false</default>
+                <label>Logistics - Laptop/Internet Issue</label>
+            </value>
+            <value>
+                <fullName>Learner not prepared/not ready</fullName>
+                <default>false</default>
+                <label>Learner not prepared/not ready</label>
+            </value>
+            <value>
+                <fullName>Incorrect/False Schedule</fullName>
+                <default>false</default>
+                <label>Incorrect/False Schedule</label>
+            </value>
+            <value>
+                <fullName>Expectation Mismatch (4Ps)</fullName>
+                <default>false</default>
+                <label>Expectation Mismatch (4Ps)</label>
+            </value>
+            <value>
+                <fullName>Not Interested/ Mind Changed</fullName>
+                <default>false</default>
+                <label>Not Interested/ Mind Changed</label>
+            </value>
+            <value>
+                <fullName>System Challenges</fullName>
+                <default>false</default>
+                <label>System Challenges</label>
+            </value>
+            <value>
+                <fullName>Under Prepared</fullName>
+                <default>false</default>
+                <label>Under Prepared</label>
+            </value>
+            <value>
+                <fullName>Rescheduled by Learner</fullName>
+                <default>false</default>
+                <label>Rescheduled by Learner</label>
+            </value>
+            <value>
+                <fullName>AO Requested for reschedule</fullName>
+                <default>false</default>
+                <label>AO Requested for reschedule</label>
+            </value>
+            <value>
+                <fullName>Learner was not prepared</fullName>
+                <default>false</default>
+                <label>Learner was not prepared</label>
+            </value>
+            <value>
+                <fullName>Erroneous Schedule</fullName>
+                <default>false</default>
+                <label>Erroneous Schedule</label>
+            </value>
+            <value>
+                <fullName>Time slot miss Match</fullName>
+                <default>false</default>
+                <label>Time slot miss Match</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Rescheduled</controllingFieldValue>
+            <valueName>Rescheduled by Learner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rescheduled</controllingFieldValue>
+            <valueName>AO Requested for reschedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rescheduled</controllingFieldValue>
+            <valueName>Time slot miss Match</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Conducted</controllingFieldValue>
+            <valueName>Learner - No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Conducted</controllingFieldValue>
+            <valueName>AO - No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Conducted</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Conducted</controllingFieldValue>
+            <valueName>Logistics - Laptop/Internet Issue</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

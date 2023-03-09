@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_Year_Fess__c</fullName>
+    <externalId>false</externalId>
+    <label>College Year Fees</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 to 50K</fullName>
+                <default>false</default>
+                <label>0 to 50K</label>
+            </value>
+            <value>
+                <fullName>50K to 1 Lac</fullName>
+                <default>false</default>
+                <label>50K to 1 Lac</label>
+            </value>
+            <value>
+                <fullName>1 Lac to 3 Lac</fullName>
+                <default>false</default>
+                <label>1 Lac to 3 Lac</label>
+            </value>
+            <value>
+                <fullName>3 Lac to 5 Lac</fullName>
+                <default>false</default>
+                <label>3 Lac to 5 Lac</label>
+            </value>
+            <value>
+                <fullName>5 Lac to 7 Lac</fullName>
+                <default>false</default>
+                <label>5 Lac to 7 Lac</label>
+            </value>
+            <value>
+                <fullName>7 Lac to 10 Lac</fullName>
+                <default>false</default>
+                <label>7 Lac to 10 Lac</label>
+            </value>
+            <value>
+                <fullName>10 Lac to 15 Lac</fullName>
+                <default>false</default>
+                <label>10 Lac to 15 Lac</label>
+            </value>
+            <value>
+                <fullName>15 Lac to 20 Lac</fullName>
+                <default>false</default>
+                <label>15 Lac to 20 Lac</label>
+            </value>
+            <value>
+                <fullName>20 Lac +</fullName>
+                <default>false</default>
+                <label>20 Lac +</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

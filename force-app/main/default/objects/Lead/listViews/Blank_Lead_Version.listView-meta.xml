@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blank_Lead_Version</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Lead_Version__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>Application_Form_Completed_Date_Time__c</columns>
+    <columns>Application_form_completed__c</columns>
+    <columns>Interview_Date__c</columns>
+    <columns>Interview_slot__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lead_Version__c</field>
+        <operation>notEqual</operation>
+        <value>V0,V1</value>
+    </filters>
+    <label>Blank Lead Version</label>
+    <sharedTo>
+        <group>Ahmad_Group1</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_with_Call_count_2</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>SM__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>Lead_Stage__c</columns>
+    <columns>Lead_status__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Total_Call_Count__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Source_Intent__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Relevel_lead_score__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>Last_Activity_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Total_Call_Count__c</field>
+        <operation>lessThan</operation>
+        <value>2</value>
+    </filters>
+    <filters>
+        <field>Lead_Stage__c</field>
+        <operation>equals</operation>
+        <value>Called,Nurturing</value>
+    </filters>
+    <label>Leads with Call count &lt; 2</label>
+</ListView>

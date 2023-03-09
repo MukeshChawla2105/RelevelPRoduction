@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>BDA__c</columns>
+    <columns>Idle_Start_Time__c</columns>
+    <columns>Idle_End_Time__c</columns>
+    <columns>Total_Idle_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BDA__c</field>
+        <operation>contains</operation>
+        <value>ashutosh</value>
+    </filters>
+    <label>All</label>
+</ListView>

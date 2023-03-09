@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Privacy_Violation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ZT - Privacy Violation (Misusing learner or parent&apos;s phone numbers for any illegal activities (sharing to competitors, posting on social media, adding to spam lists, etc.)</description>
+    <externalId>false</externalId>
+    <label>Privacy Violation</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

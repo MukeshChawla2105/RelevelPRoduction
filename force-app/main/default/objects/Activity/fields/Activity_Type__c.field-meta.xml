@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sign up</fullName>
+                <default>false</default>
+                <label>Sign up</label>
+            </value>
+            <value>
+                <fullName>Test Registered</fullName>
+                <default>false</default>
+                <label>Test Registered</label>
+            </value>
+            <value>
+                <fullName>Test Taken</fullName>
+                <default>false</default>
+                <label>Test Taken</label>
+            </value>
+            <value>
+                <fullName>Talk to Us</fullName>
+                <default>false</default>
+                <label>Talk to Us</label>
+            </value>
+            <value>
+                <fullName>Payment Failed</fullName>
+                <default>false</default>
+                <label>Payment Failed</label>
+            </value>
+            <value>
+                <fullName>Payment Successful</fullName>
+                <default>false</default>
+                <label>Payment Successful</label>
+            </value>
+            <value>
+                <fullName>No Cost EMI Financepeer</fullName>
+                <default>false</default>
+                <label>No Cost EMI Financepeer</label>
+            </value>
+            <value>
+                <fullName>Lead from Support Chat</fullName>
+                <default>false</default>
+                <label>Lead from Support Chat</label>
+            </value>
+            <value>
+                <fullName>Abandoned Cart</fullName>
+                <default>false</default>
+                <label>Abandoned Cart</label>
+            </value>
+            <value>
+                <fullName>Brochure Download</fullName>
+                <default>false</default>
+                <label>Brochure Download</label>
+            </value>
+            <value>
+                <fullName>Course Selection</fullName>
+                <default>false</default>
+                <label>Course Selection</label>
+            </value>
+            <value>
+                <fullName>Course Page - Career Impact PDF Download</fullName>
+                <default>false</default>
+                <label>Course Page - Career Impact PDF Download</label>
+            </value>
+            <value>
+                <fullName>Pay Now Clicked</fullName>
+                <default>false</default>
+                <label>Pay Now Clicked</label>
+            </value>
+            <value>
+                <fullName>Stage Changed</fullName>
+                <default>false</default>
+                <label>Stage Changed</label>
+            </value>
+            <value>
+                <fullName>Email Interaction</fullName>
+                <default>false</default>
+                <label>Email Interaction</label>
+            </value>
+            <value>
+                <fullName>IVR Call</fullName>
+                <default>false</default>
+                <label>IVR Call</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

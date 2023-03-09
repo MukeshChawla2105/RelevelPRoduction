@@ -1,0 +1,76 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" controller="ActivityComponentHelper">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="boolean"  name="expand" default="true" />
+    <aura:attribute type="boolean"  name="reload" default="true" />
+    <aura:attribute type="boolean"  name="editModal" default="false" />
+    <aura:attribute type="boolean"  name="collapse" default="false" />   
+    <aura:attribute name="lstActivity" type="list" />
+    <aura:attribute name="lstEvent" type="list" />
+    
+    <lightning:card footer="" title="">
+        <aura:if isTrue="{!v.expand}">
+            <button class="slds-button " style="margin-left:2%" onclick="{!c.expandAll}" >Expand All</button>
+        </aura:if>
+        <aura:if isTrue="{!v.collapse}">
+            <button class="slds-button " style="margin-left:2%" onclick="{!c.collapseAll}">Collapse All</button>
+        </aura:if>
+        <button class="slds-button " style="margin-left:2%" onclick="{!c.isRefreshed}">Refresh</button>
+        
+        <ul class="slds-timeline" style="margin-left:2%">        
+            
+            <!--iterate all activity records in child component-->
+            
+            <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+                <b>Meeting Updates</b>
+            </div>
+            <aura:iteration items="{!v.lstEvent}" var="Event">
+                <aura:if isTrue="{!Event.Subject != Null}">
+                    <c:ActivityComponentV1 activity="{!Event}" lstActivity="{!v.Event}" aura:id='cComp'/>
+                </aura:if>
+            </aura:iteration>
+            
+            <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+                <b>Overdue Follow-Up Task</b>
+            </div>
+            <aura:iteration items="{!v.lstActivity}" var="task">
+                <aura:if isTrue="{!task.Status == 'Overdue'}">
+                    <c:ActivityComponentV1 activity="{!task}" lstActivity="{!v.lstActivity}" aura:id='cComp'/>
+                </aura:if>
+            </aura:iteration>
+            
+            
+            
+            <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+                <b>Open Task</b>
+            </div>
+            <aura:iteration items="{!v.lstActivity}" var="task">
+                <aura:if isTrue="{!task.Status == 'Open'}">
+                    <c:ActivityComponentV1 activity="{!task}" lstActivity="{!v.lstActivity}" aura:id='cComp'/>
+                </aura:if>
+                
+            </aura:iteration>
+            
+            <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+                <b>Learners Activity</b>
+            </div>
+            <aura:iteration items="{!v.lstActivity}" var="task">
+                <aura:if  isTrue="{!task.Status == 'Completed'}" >
+                    <aura:if  isTrue="{!(!task.Stage_Changed__c)}" >
+                    <c:ActivityComponentV1 activity="{!task}" lstActivity="{!v.lstActivity}" aura:id='cComp'/>
+                    </aura:if>
+                </aura:if>
+            </aura:iteration>
+            <div style="background-color: #ECF0F1;padding:2%;margin-bottom:2%;">
+                <b>Stage/Owner Change Activity</b>
+            </div>
+            <aura:iteration items="{!v.lstActivity}" var="task">
+                <aura:if isTrue="{!task.Stage_Changed__c}">
+                    <c:ActivityComponentV1 activity="{!task}" lstActivity="{!v.lstActivity}" aura:id='cComp'/>
+                </aura:if>
+            </aura:iteration>
+            
+        </ul>
+    </lightning:card>
+</aura:component>

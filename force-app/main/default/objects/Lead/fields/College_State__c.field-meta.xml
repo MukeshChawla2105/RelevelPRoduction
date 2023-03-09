@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_State__c</fullName>
+    <externalId>false</externalId>
+    <label>College State</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ANDHRA PRADESH</fullName>
+                <default>false</default>
+                <label>ANDHRA PRADESH</label>
+            </value>
+            <value>
+                <fullName>Arunachal Pradesh</fullName>
+                <default>false</default>
+                <label>Arunachal Pradesh</label>
+            </value>
+            <value>
+                <fullName>ASSAM</fullName>
+                <default>false</default>
+                <label>ASSAM</label>
+            </value>
+            <value>
+                <fullName>BIHAR</fullName>
+                <default>false</default>
+                <label>BIHAR</label>
+            </value>
+            <value>
+                <fullName>Chhattisgarh</fullName>
+                <default>false</default>
+                <label>Chhattisgarh</label>
+            </value>
+            <value>
+                <fullName>Delhi</fullName>
+                <default>false</default>
+                <label>Delhi</label>
+            </value>
+            <value>
+                <fullName>Goa</fullName>
+                <default>false</default>
+                <label>Goa</label>
+            </value>
+            <value>
+                <fullName>Gujarat</fullName>
+                <default>false</default>
+                <label>Gujarat</label>
+            </value>
+            <value>
+                <fullName>Haryana</fullName>
+                <default>false</default>
+                <label>Haryana</label>
+            </value>
+            <value>
+                <fullName>HIMACHAL PRADESH</fullName>
+                <default>false</default>
+                <label>HIMACHAL PRADESH</label>
+            </value>
+            <value>
+                <fullName>Jammu and Kashmir</fullName>
+                <default>false</default>
+                <label>Jammu and Kashmir</label>
+            </value>
+            <value>
+                <fullName>JHARKHAND</fullName>
+                <default>false</default>
+                <label>JHARKHAND</label>
+            </value>
+            <value>
+                <fullName>Karnataka</fullName>
+                <default>false</default>
+                <label>Karnataka</label>
+            </value>
+            <value>
+                <fullName>Kerala</fullName>
+                <default>false</default>
+                <label>Kerala</label>
+            </value>
+            <value>
+                <fullName>Madhya Pradesh</fullName>
+                <default>false</default>
+                <label>Madhya Pradesh</label>
+            </value>
+            <value>
+                <fullName>Maharashtra</fullName>
+                <default>false</default>
+                <label>Maharashtra</label>
+            </value>
+            <value>
+                <fullName>Manipur</fullName>
+                <default>false</default>
+                <label>Manipur</label>
+            </value>
+            <value>
+                <fullName>Mizoram</fullName>
+                <default>false</default>
+                <label>Mizoram</label>
+            </value>
+            <value>
+                <fullName>Nagaland</fullName>
+                <default>false</default>
+                <label>Nagaland</label>
+            </value>
+            <value>
+                <fullName>NCR</fullName>
+                <default>false</default>
+                <label>NCR</label>
+            </value>
+            <value>
+                <fullName>Odisha</fullName>
+                <default>false</default>
+                <label>Odisha</label>
+            </value>
+            <value>
+                <fullName>ORISSA</fullName>
+                <default>false</default>
+                <label>ORISSA</label>
+            </value>
+            <value>
+                <fullName>PUNJAB</fullName>
+                <default>false</default>
+                <label>PUNJAB</label>
+            </value>
+            <value>
+                <fullName>Rajasthan</fullName>
+                <default>false</default>
+                <label>Rajasthan</label>
+            </value>
+            <value>
+                <fullName>Sikkim</fullName>
+                <default>false</default>
+                <label>Sikkim</label>
+            </value>
+            <value>
+                <fullName>Tamil Nadu</fullName>
+                <default>false</default>
+                <label>Tamil Nadu</label>
+            </value>
+            <value>
+                <fullName>Telangana</fullName>
+                <default>false</default>
+                <label>Telangana</label>
+            </value>
+            <value>
+                <fullName>Tripura</fullName>
+                <default>false</default>
+                <label>Tripura</label>
+            </value>
+            <value>
+                <fullName>Uttar Pradesh</fullName>
+                <default>false</default>
+                <label>Uttar Pradesh</label>
+            </value>
+            <value>
+                <fullName>Uttarakhand</fullName>
+                <default>false</default>
+                <label>Uttarakhand</label>
+            </value>
+            <value>
+                <fullName>UTTARANCHAL</fullName>
+                <default>false</default>
+                <label>UTTARANCHAL</label>
+            </value>
+            <value>
+                <fullName>West Bengal</fullName>
+                <default>false</default>
+                <label>West Bengal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

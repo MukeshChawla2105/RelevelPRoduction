@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupation_Profession__c</fullName>
+    <externalId>false</externalId>
+    <label>Profession (V)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>AO_Interview_Status_Manual__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Working Professional</fullName>
+                <default>false</default>
+                <label>WORKING PROFESSIONAL</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>STUDENT</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <valueName>Working Professional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Conducted</controllingFieldValue>
+            <valueName>Student</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

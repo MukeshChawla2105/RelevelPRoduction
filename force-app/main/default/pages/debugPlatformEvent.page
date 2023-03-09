@@ -1,0 +1,77 @@
+<apex:page >
+   
+    <apex:includeScript value="{!$Resource.testCometd}"/>
+    <apex:includeScript value="{!$Resource.testJquery}"/>
+    <apex:includeScript value="{!$Resource.testjson2}"/>
+    <apex:includeScript value="{!$Resource.testjquery_cometd}"/>
+    <script src="/support/api/46.0/lightning/opencti.js" type="text/javascript"></script>
+
+    <div id="lightning"> test test</div>
+    <script type="text/javascript">   
+        console.log("initilise script");  
+        var cSubs = null;
+        try {
+            
+            $.cometd.init({
+                url: window.location.protocol+'//'+window.location.hostname+'/cometd/52.0/',
+                requestHeaders: { Authorization: 'OAuth {!$Api.Session_ID}'},
+                appendMessageTypeToURL : false,
+                logLevel: 'debug'
+
+            });
+            
+            // Handshake.
+            $.cometd.addListener('/meta/handshake', function(message) {
+                // Only subscribe if the handshake is successful.
+                console.log("handshakereply");
+                if (message.successful) {
+                    console.log(message);
+                    // Batch all subscriptions together.
+                    $.cometd.batch(function() {
+                        // Correct to subscribe to broadcast channels.
+                        console.log('inside batch');
+                        if (cSubs) {
+                            $.cometd.unsubscribe(cSubs);
+                        }
+                        var cSubs = $.cometd.subscribe('/event/ExotelCustomPlatformEvent__e', function(message) {
+                            console.log(message);
+                            //if (message.successful) {
+                               console.log('cometdd11'+JSON.stringify(message));
+                                alert("adas");
+                                sforce.opencti.setSoftphonePanelVisibility({
+                                    visible : true,
+                                    callback : function() {
+                                        
+                                    }
+                                });
+                            //} else {
+                                //console.error('Error in subscribe: ' + JSON.stringify(message));
+                            //}
+                
+                        });            
+                    });
+                }
+            });
+            /*$.cometd.subscribe('/event/ExotelCustomPlatformEvent__e', function(message) {
+                if (message.successful) {
+                   console.log('cometdd11'+JSON.stringify(message));
+                    alert("adas");
+                    sforce.opencti.setSoftphonePanelVisibility({
+                        visible : true,
+                        callback : function() {
+                            console.log("ASd");
+                        }
+                    });
+                } else {
+                    console.error('Error in subscribe: ' + JSON.stringify(message));
+                }
+                
+            });*/
+            
+        } catch (error) {
+            console.error('error catch',error.message);
+        }
+        console.log("end script");  
+    </script>
+       
+</apex:page>
